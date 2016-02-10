@@ -28,7 +28,6 @@ Thumbs.db
 *.lib
 *.sbr
 obj/
-build/
 bindings/il/
 modules/il/
 [Rr]elease*/
