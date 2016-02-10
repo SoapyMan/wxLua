@@ -93,7 +93,7 @@ static int LUACALL wxLua_wxDialog_CreateButtonSizer(lua_State *L)
 
 #endif // ((wxUSE_BUTTON) && (wxLUA_USE_wxDialog)) && ((wxLUA_USE_wxSizer) && (wxCHECK_VERSION(2,8,0)))
 
-#if ((wxCHECK_VERSION(2,8,0) && wxUSE_BUTTON) && (wxLUA_USE_wxDialog)) && ((wxLUA_USE_wxSizer) && (wxCHECK_VERSION(2,8,0)))
+#if ((wxLUA_USE_wxSizer) && (wxCHECK_VERSION(2,8,0))) && ((wxCHECK_VERSION(2,8,0) && wxUSE_BUTTON) && (wxLUA_USE_wxDialog))
 static wxLuaArgType s_wxluatypeArray_wxLua_wxDialog_CreateSeparatedButtonSizer[] = { &wxluatype_wxDialog, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxDialog_CreateSeparatedButtonSizer(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxDialog_CreateSeparatedButtonSizer[1] = {{ wxLua_wxDialog_CreateSeparatedButtonSizer, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxDialog_CreateSeparatedButtonSizer }};
@@ -112,7 +112,7 @@ static int LUACALL wxLua_wxDialog_CreateSeparatedButtonSizer(lua_State *L)
     return 1;
 }
 
-#endif // ((wxCHECK_VERSION(2,8,0) && wxUSE_BUTTON) && (wxLUA_USE_wxDialog)) && ((wxLUA_USE_wxSizer) && (wxCHECK_VERSION(2,8,0)))
+#endif // ((wxLUA_USE_wxSizer) && (wxCHECK_VERSION(2,8,0))) && ((wxCHECK_VERSION(2,8,0) && wxUSE_BUTTON) && (wxLUA_USE_wxDialog))
 
 #if ((wxUSE_BUTTON) && (wxLUA_USE_wxDialog)) && ((wxLUA_USE_wxSizer) && (wxCHECK_VERSION(2,8,0)) && (wxUSE_BUTTON))
 static wxLuaArgType s_wxluatypeArray_wxLua_wxDialog_CreateStdDialogButtonSizer[] = { &wxluatype_wxDialog, &wxluatype_TINTEGER, NULL };
@@ -320,9 +320,9 @@ wxLuaBindMethod wxDialog_methods[] = {
     { "CreateButtonSizer", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxDialog_CreateButtonSizer, 1, NULL },
 #endif // ((wxUSE_BUTTON) && (wxLUA_USE_wxDialog)) && ((wxLUA_USE_wxSizer) && (wxCHECK_VERSION(2,8,0)))
 
-#if ((wxCHECK_VERSION(2,8,0) && wxUSE_BUTTON) && (wxLUA_USE_wxDialog)) && ((wxLUA_USE_wxSizer) && (wxCHECK_VERSION(2,8,0)))
+#if ((wxLUA_USE_wxSizer) && (wxCHECK_VERSION(2,8,0))) && ((wxCHECK_VERSION(2,8,0) && wxUSE_BUTTON) && (wxLUA_USE_wxDialog))
     { "CreateSeparatedButtonSizer", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxDialog_CreateSeparatedButtonSizer, 1, NULL },
-#endif // ((wxCHECK_VERSION(2,8,0) && wxUSE_BUTTON) && (wxLUA_USE_wxDialog)) && ((wxLUA_USE_wxSizer) && (wxCHECK_VERSION(2,8,0)))
+#endif // ((wxLUA_USE_wxSizer) && (wxCHECK_VERSION(2,8,0))) && ((wxCHECK_VERSION(2,8,0) && wxUSE_BUTTON) && (wxLUA_USE_wxDialog))
 
 #if ((wxUSE_BUTTON) && (wxLUA_USE_wxDialog)) && ((wxLUA_USE_wxSizer) && (wxCHECK_VERSION(2,8,0)) && (wxUSE_BUTTON))
     { "CreateStdDialogButtonSizer", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxDialog_CreateStdDialogButtonSizer, 1, NULL },
@@ -443,7 +443,7 @@ static int LUACALL wxLua_wxColourData_GetChooseFull(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxColourDialog && wxUSE_COLOURDLG) && (wxLUA_USE_wxColourPenBrush)
+#if (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxColourDialog && wxUSE_COLOURDLG)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxColourData_GetColour[] = { &wxluatype_wxColourData, NULL };
 static int LUACALL wxLua_wxColourData_GetColour(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxColourData_GetColour[1] = {{ wxLua_wxColourData_GetColour, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxColourData_GetColour }};
@@ -484,7 +484,7 @@ static int LUACALL wxLua_wxColourData_GetCustomColour(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxColourDialog && wxUSE_COLOURDLG) && (wxLUA_USE_wxColourPenBrush)
+#endif // (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxColourDialog && wxUSE_COLOURDLG)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxColourData_SetChooseFull[] = { &wxluatype_wxColourData, &wxluatype_TBOOLEAN, NULL };
 static int LUACALL wxLua_wxColourData_SetChooseFull(lua_State *L);
@@ -503,7 +503,7 @@ static int LUACALL wxLua_wxColourData_SetChooseFull(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxColourDialog && wxUSE_COLOURDLG) && (wxLUA_USE_wxColourPenBrush)
+#if (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxColourDialog && wxUSE_COLOURDLG)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxColourData_SetColour[] = { &wxluatype_wxColourData, &wxluatype_wxColour, NULL };
 static int LUACALL wxLua_wxColourData_SetColour(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxColourData_SetColour[1] = {{ wxLua_wxColourData_SetColour, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxColourData_SetColour }};
@@ -538,7 +538,7 @@ static int LUACALL wxLua_wxColourData_SetCustomColour(lua_State *L)
     return 0;
 }
 
-#endif // (wxLUA_USE_wxColourDialog && wxUSE_COLOURDLG) && (wxLUA_USE_wxColourPenBrush)
+#endif // (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxColourDialog && wxUSE_COLOURDLG)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxColourData_delete[] = { &wxluatype_wxColourData, NULL };
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxColourData_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxColourData_delete }};
@@ -600,17 +600,17 @@ void wxLua_wxColourData_delete_function(void** p)
 wxLuaBindMethod wxColourData_methods[] = {
     { "GetChooseFull", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxColourData_GetChooseFull, 1, NULL },
 
-#if (wxLUA_USE_wxColourDialog && wxUSE_COLOURDLG) && (wxLUA_USE_wxColourPenBrush)
+#if (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxColourDialog && wxUSE_COLOURDLG)
     { "GetColour", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxColourData_GetColour, 1, NULL },
     { "GetCustomColour", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxColourData_GetCustomColour, 1, NULL },
-#endif // (wxLUA_USE_wxColourDialog && wxUSE_COLOURDLG) && (wxLUA_USE_wxColourPenBrush)
+#endif // (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxColourDialog && wxUSE_COLOURDLG)
 
     { "SetChooseFull", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxColourData_SetChooseFull, 1, NULL },
 
-#if (wxLUA_USE_wxColourDialog && wxUSE_COLOURDLG) && (wxLUA_USE_wxColourPenBrush)
+#if (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxColourDialog && wxUSE_COLOURDLG)
     { "SetColour", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxColourData_SetColour, 1, NULL },
     { "SetCustomColour", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxColourData_SetCustomColour, 1, NULL },
-#endif // (wxLUA_USE_wxColourDialog && wxUSE_COLOURDLG) && (wxLUA_USE_wxColourPenBrush)
+#endif // (wxLUA_USE_wxColourPenBrush) && (wxLUA_USE_wxColourDialog && wxUSE_COLOURDLG)
 
     { "delete", WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, s_wxluafunc_wxLua_wxColourData_delete, 1, NULL },
 
@@ -942,7 +942,7 @@ static int LUACALL wxLua_wxFileDialog_constructor(lua_State *L)
 
 #endif // (((wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileDialog && wxUSE_FILEDLG)) && (wxLUA_USE_wxFileDialog && wxUSE_FILEDLG)) && (wxLUA_USE_wxPointSizeRect)
 
-#if ((wxLUA_USE_wxFileDialog && wxUSE_FILEDLG) && (wxLUA_USE_wxPointSizeRect)) && ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileDialog && wxUSE_FILEDLG))
+#if (((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileDialog && wxUSE_FILEDLG)) && (wxLUA_USE_wxFileDialog && wxUSE_FILEDLG)) && (wxLUA_USE_wxPointSizeRect)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileDialog_constructor[] = { &wxluatype_wxWindow, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_TINTEGER, &wxluatype_wxPoint, NULL };
 static int LUACALL wxLua_wxFileDialog_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileDialog_constructor[1] = {{ wxLua_wxFileDialog_constructor, WXLUAMETHOD_CONSTRUCTOR, 1, 7, s_wxluatypeArray_wxLua_wxFileDialog_constructor }};
@@ -975,7 +975,7 @@ static int LUACALL wxLua_wxFileDialog_constructor(lua_State *L)
     return 1;
 }
 
-#endif // ((wxLUA_USE_wxFileDialog && wxUSE_FILEDLG) && (wxLUA_USE_wxPointSizeRect)) && ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileDialog && wxUSE_FILEDLG))
+#endif // (((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileDialog && wxUSE_FILEDLG)) && (wxLUA_USE_wxFileDialog && wxUSE_FILEDLG)) && (wxLUA_USE_wxPointSizeRect)
 
 
 
@@ -1014,9 +1014,9 @@ wxLuaBindMethod wxFileDialog_methods[] = {
 
 #if (((wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileDialog && wxUSE_FILEDLG)) && (wxLUA_USE_wxFileDialog && wxUSE_FILEDLG)) && (wxLUA_USE_wxPointSizeRect)
     { "wxFileDialog", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxFileDialog_constructor, 1, NULL },
-#elif ((wxLUA_USE_wxFileDialog && wxUSE_FILEDLG) && (wxLUA_USE_wxPointSizeRect)) && ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileDialog && wxUSE_FILEDLG))
+#elif (((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileDialog && wxUSE_FILEDLG)) && (wxLUA_USE_wxFileDialog && wxUSE_FILEDLG)) && (wxLUA_USE_wxPointSizeRect)
     { "wxFileDialog", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxFileDialog_constructor, 1, NULL },
-#endif // ((wxLUA_USE_wxFileDialog && wxUSE_FILEDLG) && (wxLUA_USE_wxPointSizeRect)) && ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileDialog && wxUSE_FILEDLG))
+#endif // (((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileDialog && wxUSE_FILEDLG)) && (wxLUA_USE_wxFileDialog && wxUSE_FILEDLG)) && (wxLUA_USE_wxPointSizeRect)
     { 0, 0, 0, 0 },
 };
 
@@ -1137,7 +1137,7 @@ static int LUACALL wxLua_wxDirDialog_SetStyle(lua_State *L)
 
 #endif // (!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxDirDialog && wxUSE_DIRDLG)
 
-#if (wxLUA_USE_wxDirDialog && wxUSE_DIRDLG) && (wxLUA_USE_wxPointSizeRect)
+#if (wxLUA_USE_wxPointSizeRect) && (wxLUA_USE_wxDirDialog && wxUSE_DIRDLG)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxDirDialog_constructor[] = { &wxluatype_wxWindow, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_TINTEGER, &wxluatype_wxPoint, NULL };
 static int LUACALL wxLua_wxDirDialog_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxDirDialog_constructor[1] = {{ wxLua_wxDirDialog_constructor, WXLUAMETHOD_CONSTRUCTOR, 1, 5, s_wxluatypeArray_wxLua_wxDirDialog_constructor }};
@@ -1166,7 +1166,7 @@ static int LUACALL wxLua_wxDirDialog_constructor(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxDirDialog && wxUSE_DIRDLG) && (wxLUA_USE_wxPointSizeRect)
+#endif // (wxLUA_USE_wxPointSizeRect) && (wxLUA_USE_wxDirDialog && wxUSE_DIRDLG)
 
 
 
@@ -1192,9 +1192,9 @@ wxLuaBindMethod wxDirDialog_methods[] = {
     { "SetStyle", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxDirDialog_SetStyle, 1, NULL },
 #endif // (!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxDirDialog && wxUSE_DIRDLG)
 
-#if (wxLUA_USE_wxDirDialog && wxUSE_DIRDLG) && (wxLUA_USE_wxPointSizeRect)
+#if (wxLUA_USE_wxPointSizeRect) && (wxLUA_USE_wxDirDialog && wxUSE_DIRDLG)
     { "wxDirDialog", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxDirDialog_constructor, 1, NULL },
-#endif // (wxLUA_USE_wxDirDialog && wxUSE_DIRDLG) && (wxLUA_USE_wxPointSizeRect)
+#endif // (wxLUA_USE_wxPointSizeRect) && (wxLUA_USE_wxDirDialog && wxUSE_DIRDLG)
 
     { 0, 0, 0, 0 },
 };
@@ -1971,7 +1971,7 @@ static int LUACALL wxLua_wxSingleChoiceDialog_SetSelection(lua_State *L)
 }
 
 
-#if ((wxLUA_USE_wxPointSizeRect) && (wxLUA_USE_wxArrayString)) && (wxUSE_CHOICEDLG && wxLUA_USE_wxSingleChoiceDialog)
+#if ((wxUSE_CHOICEDLG && wxLUA_USE_wxSingleChoiceDialog) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxArrayString)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxSingleChoiceDialog_constructor[] = { &wxluatype_wxWindow, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_wxArrayString, &wxluatype_TINTEGER, &wxluatype_wxPoint, NULL };
 static int LUACALL wxLua_wxSingleChoiceDialog_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxSingleChoiceDialog_constructor[1] = {{ wxLua_wxSingleChoiceDialog_constructor, WXLUAMETHOD_CONSTRUCTOR, 4, 6, s_wxluatypeArray_wxLua_wxSingleChoiceDialog_constructor }};
@@ -2005,7 +2005,7 @@ static int LUACALL wxLua_wxSingleChoiceDialog_constructor(lua_State *L)
 }
 
 
-#endif // ((wxLUA_USE_wxPointSizeRect) && (wxLUA_USE_wxArrayString)) && (wxUSE_CHOICEDLG && wxLUA_USE_wxSingleChoiceDialog)
+#endif // ((wxUSE_CHOICEDLG && wxLUA_USE_wxSingleChoiceDialog) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxArrayString)
 
 
 
@@ -2021,9 +2021,9 @@ wxLuaBindMethod wxSingleChoiceDialog_methods[] = {
     { "GetStringSelection", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxSingleChoiceDialog_GetStringSelection, 1, NULL },
     { "SetSelection", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxSingleChoiceDialog_SetSelection, 1, NULL },
 
-#if ((wxLUA_USE_wxPointSizeRect) && (wxLUA_USE_wxArrayString)) && (wxUSE_CHOICEDLG && wxLUA_USE_wxSingleChoiceDialog)
+#if ((wxUSE_CHOICEDLG && wxLUA_USE_wxSingleChoiceDialog) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxArrayString)
     { "wxSingleChoiceDialog", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxSingleChoiceDialog_constructor, 1, NULL },
-#endif // ((wxLUA_USE_wxPointSizeRect) && (wxLUA_USE_wxArrayString)) && (wxUSE_CHOICEDLG && wxLUA_USE_wxSingleChoiceDialog)
+#endif // ((wxUSE_CHOICEDLG && wxLUA_USE_wxSingleChoiceDialog) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxArrayString)
 
     { 0, 0, 0, 0 },
 };
@@ -2074,7 +2074,7 @@ static int LUACALL wxLua_wxTextEntryDialog_SetValue(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxPointSizeRect) && (wxUSE_TEXTDLG && wxLUA_USE_wxTextEntryDialog)
+#if (wxUSE_TEXTDLG && wxLUA_USE_wxTextEntryDialog) && (wxLUA_USE_wxPointSizeRect)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxTextEntryDialog_constructor[] = { &wxluatype_wxWindow, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_TINTEGER, &wxluatype_wxPoint, NULL };
 static int LUACALL wxLua_wxTextEntryDialog_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxTextEntryDialog_constructor[1] = {{ wxLua_wxTextEntryDialog_constructor, WXLUAMETHOD_CONSTRUCTOR, 2, 6, s_wxluatypeArray_wxLua_wxTextEntryDialog_constructor }};
@@ -2105,7 +2105,7 @@ static int LUACALL wxLua_wxTextEntryDialog_constructor(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxPointSizeRect) && (wxUSE_TEXTDLG && wxLUA_USE_wxTextEntryDialog)
+#endif // (wxUSE_TEXTDLG && wxLUA_USE_wxTextEntryDialog) && (wxLUA_USE_wxPointSizeRect)
 
 
 
@@ -2120,9 +2120,9 @@ wxLuaBindMethod wxTextEntryDialog_methods[] = {
     { "GetValue", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxTextEntryDialog_GetValue, 1, NULL },
     { "SetValue", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxTextEntryDialog_SetValue, 1, NULL },
 
-#if (wxLUA_USE_wxPointSizeRect) && (wxUSE_TEXTDLG && wxLUA_USE_wxTextEntryDialog)
+#if (wxUSE_TEXTDLG && wxLUA_USE_wxTextEntryDialog) && (wxLUA_USE_wxPointSizeRect)
     { "wxTextEntryDialog", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxTextEntryDialog_constructor, 1, NULL },
-#endif // (wxLUA_USE_wxPointSizeRect) && (wxUSE_TEXTDLG && wxLUA_USE_wxTextEntryDialog)
+#endif // (wxUSE_TEXTDLG && wxLUA_USE_wxTextEntryDialog) && (wxLUA_USE_wxPointSizeRect)
 
     { 0, 0, 0, 0 },
 };
@@ -2140,7 +2140,7 @@ int wxTextEntryDialog_methodCount = sizeof(wxTextEntryDialog_methods)/sizeof(wxL
 // Lua MetaTable Tag for Class 'wxPasswordEntryDialog'
 int wxluatype_wxPasswordEntryDialog = WXLUA_TUNKNOWN;
 
-#if (wxLUA_USE_wxPointSizeRect) && (wxUSE_TEXTDLG && wxLUA_USE_wxTextEntryDialog)
+#if (wxUSE_TEXTDLG && wxLUA_USE_wxTextEntryDialog) && (wxLUA_USE_wxPointSizeRect)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxPasswordEntryDialog_constructor[] = { &wxluatype_wxWindow, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_TINTEGER, &wxluatype_wxPoint, NULL };
 static int LUACALL wxLua_wxPasswordEntryDialog_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxPasswordEntryDialog_constructor[1] = {{ wxLua_wxPasswordEntryDialog_constructor, WXLUAMETHOD_CONSTRUCTOR, 2, 6, s_wxluatypeArray_wxLua_wxPasswordEntryDialog_constructor }};
@@ -2171,7 +2171,7 @@ static int LUACALL wxLua_wxPasswordEntryDialog_constructor(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxPointSizeRect) && (wxUSE_TEXTDLG && wxLUA_USE_wxTextEntryDialog)
+#endif // (wxUSE_TEXTDLG && wxLUA_USE_wxTextEntryDialog) && (wxLUA_USE_wxPointSizeRect)
 
 
 
@@ -2183,9 +2183,9 @@ void wxLua_wxPasswordEntryDialog_delete_function(void** p)
 
 // Map Lua Class Methods to C Binding Functions
 wxLuaBindMethod wxPasswordEntryDialog_methods[] = {
-#if (wxLUA_USE_wxPointSizeRect) && (wxUSE_TEXTDLG && wxLUA_USE_wxTextEntryDialog)
+#if (wxUSE_TEXTDLG && wxLUA_USE_wxTextEntryDialog) && (wxLUA_USE_wxPointSizeRect)
     { "wxPasswordEntryDialog", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxPasswordEntryDialog_constructor, 1, NULL },
-#endif // (wxLUA_USE_wxPointSizeRect) && (wxUSE_TEXTDLG && wxLUA_USE_wxTextEntryDialog)
+#endif // (wxUSE_TEXTDLG && wxLUA_USE_wxTextEntryDialog) && (wxLUA_USE_wxPointSizeRect)
 
     { 0, 0, 0, 0 },
 };
@@ -2302,7 +2302,7 @@ static int LUACALL wxLua_wxFontData_GetAllowSymbols(lua_State *L)
 }
 
 
-#if (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxFont)
+#if (wxLUA_USE_wxFont) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFontData_GetChosenFont[] = { &wxluatype_wxFontData, NULL };
 static int LUACALL wxLua_wxFontData_GetChosenFont(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFontData_GetChosenFont[1] = {{ wxLua_wxFontData_GetChosenFont, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxFontData_GetChosenFont }};
@@ -2322,9 +2322,9 @@ static int LUACALL wxLua_wxFontData_GetChosenFont(lua_State *L)
     return 1;
 }
 
-#endif // (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxFont)
+#endif // (wxLUA_USE_wxFont) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
 
-#if (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxColourPenBrush)
+#if (wxLUA_USE_wxColourPenBrush) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFontData_GetColour[] = { &wxluatype_wxFontData, NULL };
 static int LUACALL wxLua_wxFontData_GetColour(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFontData_GetColour[1] = {{ wxLua_wxFontData_GetColour, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxFontData_GetColour }};
@@ -2344,7 +2344,7 @@ static int LUACALL wxLua_wxFontData_GetColour(lua_State *L)
     return 1;
 }
 
-#endif // (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxColourPenBrush)
+#endif // (wxLUA_USE_wxColourPenBrush) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFontData_GetEnableEffects[] = { &wxluatype_wxFontData, NULL };
 static int LUACALL wxLua_wxFontData_GetEnableEffects(lua_State *L);
@@ -2363,7 +2363,7 @@ static int LUACALL wxLua_wxFontData_GetEnableEffects(lua_State *L)
 }
 
 
-#if (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxFont)
+#if (wxLUA_USE_wxFont) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFontData_GetInitialFont[] = { &wxluatype_wxFontData, NULL };
 static int LUACALL wxLua_wxFontData_GetInitialFont(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFontData_GetInitialFont[1] = {{ wxLua_wxFontData_GetInitialFont, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxFontData_GetInitialFont }};
@@ -2383,7 +2383,7 @@ static int LUACALL wxLua_wxFontData_GetInitialFont(lua_State *L)
     return 1;
 }
 
-#endif // (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxFont)
+#endif // (wxLUA_USE_wxFont) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFontData_GetShowHelp[] = { &wxluatype_wxFontData, NULL };
 static int LUACALL wxLua_wxFontData_GetShowHelp(lua_State *L);
@@ -2418,7 +2418,7 @@ static int LUACALL wxLua_wxFontData_SetAllowSymbols(lua_State *L)
 }
 
 
-#if (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxFont)
+#if (wxLUA_USE_wxFont) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFontData_SetChosenFont[] = { &wxluatype_wxFontData, &wxluatype_wxFont, NULL };
 static int LUACALL wxLua_wxFontData_SetChosenFont(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFontData_SetChosenFont[1] = {{ wxLua_wxFontData_SetChosenFont, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxFontData_SetChosenFont }};
@@ -2435,9 +2435,9 @@ static int LUACALL wxLua_wxFontData_SetChosenFont(lua_State *L)
     return 0;
 }
 
-#endif // (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxFont)
+#endif // (wxLUA_USE_wxFont) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
 
-#if (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxColourPenBrush)
+#if (wxLUA_USE_wxColourPenBrush) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFontData_SetColour[] = { &wxluatype_wxFontData, &wxluatype_wxColour, NULL };
 static int LUACALL wxLua_wxFontData_SetColour(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFontData_SetColour[1] = {{ wxLua_wxFontData_SetColour, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxFontData_SetColour }};
@@ -2454,9 +2454,9 @@ static int LUACALL wxLua_wxFontData_SetColour(lua_State *L)
     return 0;
 }
 
-#endif // (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxColourPenBrush)
+#endif // (wxLUA_USE_wxColourPenBrush) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
 
-#if (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxFont)
+#if (wxLUA_USE_wxFont) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFontData_SetInitialFont[] = { &wxluatype_wxFontData, &wxluatype_wxFont, NULL };
 static int LUACALL wxLua_wxFontData_SetInitialFont(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFontData_SetInitialFont[1] = {{ wxLua_wxFontData_SetInitialFont, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxFontData_SetInitialFont }};
@@ -2473,7 +2473,7 @@ static int LUACALL wxLua_wxFontData_SetInitialFont(lua_State *L)
     return 0;
 }
 
-#endif // (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxFont)
+#endif // (wxLUA_USE_wxFont) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFontData_SetRange[] = { &wxluatype_wxFontData, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxFontData_SetRange(lua_State *L);
@@ -2570,34 +2570,34 @@ wxLuaBindMethod wxFontData_methods[] = {
     { "EnableEffects", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFontData_EnableEffects, 1, NULL },
     { "GetAllowSymbols", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFontData_GetAllowSymbols, 1, NULL },
 
-#if (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxFont)
+#if (wxLUA_USE_wxFont) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
     { "GetChosenFont", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFontData_GetChosenFont, 1, NULL },
-#endif // (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxFont)
+#endif // (wxLUA_USE_wxFont) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
 
-#if (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxColourPenBrush)
+#if (wxLUA_USE_wxColourPenBrush) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
     { "GetColour", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFontData_GetColour, 1, NULL },
-#endif // (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxColourPenBrush)
+#endif // (wxLUA_USE_wxColourPenBrush) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
 
     { "GetEnableEffects", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFontData_GetEnableEffects, 1, NULL },
 
-#if (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxFont)
+#if (wxLUA_USE_wxFont) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
     { "GetInitialFont", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFontData_GetInitialFont, 1, NULL },
-#endif // (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxFont)
+#endif // (wxLUA_USE_wxFont) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
 
     { "GetShowHelp", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFontData_GetShowHelp, 1, NULL },
     { "SetAllowSymbols", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFontData_SetAllowSymbols, 1, NULL },
 
-#if (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxFont)
+#if (wxLUA_USE_wxFont) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
     { "SetChosenFont", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFontData_SetChosenFont, 1, NULL },
-#endif // (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxFont)
+#endif // (wxLUA_USE_wxFont) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
 
-#if (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxColourPenBrush)
+#if (wxLUA_USE_wxColourPenBrush) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
     { "SetColour", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFontData_SetColour, 1, NULL },
-#endif // (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxColourPenBrush)
+#endif // (wxLUA_USE_wxColourPenBrush) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
 
-#if (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxFont)
+#if (wxLUA_USE_wxFont) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
     { "SetInitialFont", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFontData_SetInitialFont, 1, NULL },
-#endif // (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog) && (wxLUA_USE_wxFont)
+#endif // (wxLUA_USE_wxFont) && (wxUSE_FONTDLG && wxLUA_USE_wxFontDialog)
 
     { "SetRange", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFontData_SetRange, 1, NULL },
     { "SetShowHelp", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFontData_SetShowHelp, 1, NULL },

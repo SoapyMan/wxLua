@@ -707,7 +707,7 @@ static int LUACALL wxLua_wxFileName_AssignHomeDir(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxFile && wxUSE_FILE) && ((wxCHECK_VERSION(2,8,0) && wxUSE_FILE) && (wxLUA_USE_wxFileName))
+#if ((wxCHECK_VERSION(2,8,0) && wxUSE_FILE) && (wxLUA_USE_wxFileName)) && (wxLUA_USE_wxFile && wxUSE_FILE)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileName_AssignTempFileName2[] = { &wxluatype_wxFileName, &wxluatype_TSTRING, &wxluatype_wxFile, NULL };
 static int LUACALL wxLua_wxFileName_AssignTempFileName2(lua_State *L);
 // static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileName_AssignTempFileName2[1] = {{ wxLua_wxFileName_AssignTempFileName2, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxFileName_AssignTempFileName2 }};
@@ -726,7 +726,7 @@ static int LUACALL wxLua_wxFileName_AssignTempFileName2(lua_State *L)
     return 0;
 }
 
-#endif // (wxLUA_USE_wxFile && wxUSE_FILE) && ((wxCHECK_VERSION(2,8,0) && wxUSE_FILE) && (wxLUA_USE_wxFileName))
+#endif // ((wxCHECK_VERSION(2,8,0) && wxUSE_FILE) && (wxLUA_USE_wxFileName)) && (wxLUA_USE_wxFile && wxUSE_FILE)
 
 #if (wxCHECK_VERSION(2,8,0) && (wxUSE_FILE || wxUSE_FFILE )) && (wxLUA_USE_wxFileName)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileName_AssignTempFileName1[] = { &wxluatype_wxFileName, &wxluatype_TSTRING, NULL };
@@ -747,7 +747,7 @@ static int LUACALL wxLua_wxFileName_AssignTempFileName1(lua_State *L)
 
 #endif // (wxCHECK_VERSION(2,8,0) && (wxUSE_FILE || wxUSE_FFILE )) && (wxLUA_USE_wxFileName)
 
-#if (wxLUA_USE_wxFile && wxUSE_FILE) && ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileName))
+#if ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileName)) && (wxLUA_USE_wxFile && wxUSE_FILE)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileName_AssignTempFileName[] = { &wxluatype_wxFileName, &wxluatype_TSTRING, &wxluatype_wxFile, NULL };
 static int LUACALL wxLua_wxFileName_AssignTempFileName(lua_State *L);
 // static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileName_AssignTempFileName[1] = {{ wxLua_wxFileName_AssignTempFileName, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxFileName_AssignTempFileName }};
@@ -768,7 +768,7 @@ static int LUACALL wxLua_wxFileName_AssignTempFileName(lua_State *L)
     return 0;
 }
 
-#endif // (wxLUA_USE_wxFile && wxUSE_FILE) && ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileName))
+#endif // ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileName)) && (wxLUA_USE_wxFile && wxUSE_FILE)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileName_Clear[] = { &wxluatype_wxFileName, NULL };
 static int LUACALL wxLua_wxFileName_Clear(lua_State *L);
@@ -935,7 +935,7 @@ static int LUACALL wxLua_wxFileName_GetDirCount(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxArrayString) && (wxLUA_USE_wxFileName)
+#if (wxLUA_USE_wxFileName) && (wxLUA_USE_wxArrayString)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileName_GetDirs[] = { &wxluatype_wxFileName, NULL };
 static int LUACALL wxLua_wxFileName_GetDirs(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileName_GetDirs[1] = {{ wxLua_wxFileName_GetDirs, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxFileName_GetDirs }};
@@ -954,7 +954,7 @@ static int LUACALL wxLua_wxFileName_GetDirs(lua_State *L)
 }
 
 
-#endif // (wxLUA_USE_wxArrayString) && (wxLUA_USE_wxFileName)
+#endif // (wxLUA_USE_wxFileName) && (wxLUA_USE_wxArrayString)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileName_GetExt[] = { &wxluatype_wxFileName, NULL };
 static int LUACALL wxLua_wxFileName_GetExt(lua_State *L);
@@ -1100,7 +1100,7 @@ static int LUACALL wxLua_wxFileName_GetLongPath(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxDateTime && wxUSE_DATETIME) && (wxLUA_USE_wxFileName)
+#if (wxLUA_USE_wxFileName) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileName_GetModificationTime[] = { &wxluatype_wxFileName, NULL };
 static int LUACALL wxLua_wxFileName_GetModificationTime(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileName_GetModificationTime[1] = {{ wxLua_wxFileName_GetModificationTime, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxFileName_GetModificationTime }};
@@ -1120,7 +1120,7 @@ static int LUACALL wxLua_wxFileName_GetModificationTime(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxDateTime && wxUSE_DATETIME) && (wxLUA_USE_wxFileName)
+#endif // (wxLUA_USE_wxFileName) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileName_GetName[] = { &wxluatype_wxFileName, NULL };
 static int LUACALL wxLua_wxFileName_GetName(lua_State *L);
@@ -1251,7 +1251,7 @@ static int LUACALL wxLua_wxFileName_GetShortPath(lua_State *L)
 }
 
 
-#if (wxUSE_LONGLONG) && ((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0)))
+#if ((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0))) && (wxUSE_LONGLONG)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileName_GetSize1[] = { &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxFileName_GetSize1(lua_State *L);
 // static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileName_GetSize1[1] = {{ wxLua_wxFileName_GetSize1, WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, 1, 1, s_wxluatypeArray_wxLua_wxFileName_GetSize1 }};
@@ -1290,7 +1290,7 @@ static int LUACALL wxLua_wxFileName_GetSize(lua_State *L)
     return 1;
 }
 
-#endif // (wxUSE_LONGLONG) && ((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0)))
+#endif // ((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0))) && (wxUSE_LONGLONG)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileName_GetTimes[] = { &wxluatype_wxFileName, NULL };
 static int LUACALL wxLua_wxFileName_GetTimes(lua_State *L);
@@ -2002,7 +2002,7 @@ static int LUACALL wxLua_wxFileName_SetName(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxDateTime && wxUSE_DATETIME) && (wxLUA_USE_wxFileName)
+#if (wxLUA_USE_wxFileName) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileName_SetTimes[] = { &wxluatype_wxFileName, &wxluatype_wxDateTime, &wxluatype_wxDateTime, &wxluatype_wxDateTime, NULL };
 static int LUACALL wxLua_wxFileName_SetTimes(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileName_SetTimes[1] = {{ wxLua_wxFileName_SetTimes, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxFileName_SetTimes }};
@@ -2025,7 +2025,7 @@ static int LUACALL wxLua_wxFileName_SetTimes(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxDateTime && wxUSE_DATETIME) && (wxLUA_USE_wxFileName)
+#endif // (wxLUA_USE_wxFileName) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileName_SetVolume[] = { &wxluatype_wxFileName, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxFileName_SetVolume(lua_State *L);
@@ -2303,26 +2303,26 @@ static int s_wxluafunc_wxLua_wxFileName_Assign_overload_count = sizeof(s_wxluafu
 
 #endif // (wxLUA_USE_wxFileName)
 
-#if ((wxLUA_USE_wxFile && wxUSE_FILE) && ((wxCHECK_VERSION(2,8,0) && wxUSE_FILE) && (wxLUA_USE_wxFileName)))||((wxCHECK_VERSION(2,8,0) && (wxUSE_FILE || wxUSE_FFILE )) && (wxLUA_USE_wxFileName))||((wxLUA_USE_wxFile && wxUSE_FILE) && ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileName)))
+#if (((wxCHECK_VERSION(2,8,0) && wxUSE_FILE) && (wxLUA_USE_wxFileName)) && (wxLUA_USE_wxFile && wxUSE_FILE))||((wxCHECK_VERSION(2,8,0) && (wxUSE_FILE || wxUSE_FFILE )) && (wxLUA_USE_wxFileName))||(((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileName)) && (wxLUA_USE_wxFile && wxUSE_FILE))
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileName_AssignTempFileName_overload[] =
 {
 
-#if (wxLUA_USE_wxFile && wxUSE_FILE) && ((wxCHECK_VERSION(2,8,0) && wxUSE_FILE) && (wxLUA_USE_wxFileName))
+#if ((wxCHECK_VERSION(2,8,0) && wxUSE_FILE) && (wxLUA_USE_wxFileName)) && (wxLUA_USE_wxFile && wxUSE_FILE)
     { wxLua_wxFileName_AssignTempFileName2, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxFileName_AssignTempFileName2 },
-#endif // (wxLUA_USE_wxFile && wxUSE_FILE) && ((wxCHECK_VERSION(2,8,0) && wxUSE_FILE) && (wxLUA_USE_wxFileName))
+#endif // ((wxCHECK_VERSION(2,8,0) && wxUSE_FILE) && (wxLUA_USE_wxFileName)) && (wxLUA_USE_wxFile && wxUSE_FILE)
 
 #if (wxCHECK_VERSION(2,8,0) && (wxUSE_FILE || wxUSE_FFILE )) && (wxLUA_USE_wxFileName)
     { wxLua_wxFileName_AssignTempFileName1, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxFileName_AssignTempFileName1 },
 #endif // (wxCHECK_VERSION(2,8,0) && (wxUSE_FILE || wxUSE_FFILE )) && (wxLUA_USE_wxFileName)
 
-#if (wxLUA_USE_wxFile && wxUSE_FILE) && ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileName))
+#if ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileName)) && (wxLUA_USE_wxFile && wxUSE_FILE)
     { wxLua_wxFileName_AssignTempFileName, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxFileName_AssignTempFileName },
-#endif // (wxLUA_USE_wxFile && wxUSE_FILE) && ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileName))
+#endif // ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileName)) && (wxLUA_USE_wxFile && wxUSE_FILE)
 };
 static int s_wxluafunc_wxLua_wxFileName_AssignTempFileName_overload_count = sizeof(s_wxluafunc_wxLua_wxFileName_AssignTempFileName_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // ((wxLUA_USE_wxFile && wxUSE_FILE) && ((wxCHECK_VERSION(2,8,0) && wxUSE_FILE) && (wxLUA_USE_wxFileName)))||((wxCHECK_VERSION(2,8,0) && (wxUSE_FILE || wxUSE_FFILE )) && (wxLUA_USE_wxFileName))||((wxLUA_USE_wxFile && wxUSE_FILE) && ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileName)))
+#endif // (((wxCHECK_VERSION(2,8,0) && wxUSE_FILE) && (wxLUA_USE_wxFileName)) && (wxLUA_USE_wxFile && wxUSE_FILE))||((wxCHECK_VERSION(2,8,0) && (wxUSE_FILE || wxUSE_FFILE )) && (wxLUA_USE_wxFileName))||(((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileName)) && (wxLUA_USE_wxFile && wxUSE_FILE))
 
 #if (wxLUA_USE_wxFileName)
 // function overload table
@@ -2343,22 +2343,22 @@ static int s_wxluafunc_wxLua_wxFileName_FileExists_overload_count = sizeof(s_wxl
 
 #endif // (wxLUA_USE_wxFileName)
 
-#if ((wxUSE_LONGLONG) && ((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0))))
+#if (((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0))) && (wxUSE_LONGLONG))
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileName_GetSize_overload[] =
 {
 
-#if (wxUSE_LONGLONG) && ((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0)))
+#if ((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0))) && (wxUSE_LONGLONG)
     { wxLua_wxFileName_GetSize1, WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, 1, 1, s_wxluatypeArray_wxLua_wxFileName_GetSize1 },
-#endif // (wxUSE_LONGLONG) && ((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0)))
+#endif // ((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0))) && (wxUSE_LONGLONG)
 
-#if (wxUSE_LONGLONG) && ((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0)))
+#if ((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0))) && (wxUSE_LONGLONG)
     { wxLua_wxFileName_GetSize, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxFileName_GetSize },
-#endif // (wxUSE_LONGLONG) && ((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0)))
+#endif // ((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0))) && (wxUSE_LONGLONG)
 };
 static int s_wxluafunc_wxLua_wxFileName_GetSize_overload_count = sizeof(s_wxluafunc_wxLua_wxFileName_GetSize_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // ((wxUSE_LONGLONG) && ((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0))))
+#endif // (((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0))) && (wxUSE_LONGLONG))
 
 #if ((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0)))
 // function overload table
@@ -2489,9 +2489,9 @@ wxLuaBindMethod wxFileName_methods[] = {
     { "AssignDir", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_AssignDir, 1, NULL },
     { "AssignHomeDir", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_AssignHomeDir, 1, NULL },
 
-#if ((wxLUA_USE_wxFile && wxUSE_FILE) && ((wxCHECK_VERSION(2,8,0) && wxUSE_FILE) && (wxLUA_USE_wxFileName)))||((wxCHECK_VERSION(2,8,0) && (wxUSE_FILE || wxUSE_FFILE )) && (wxLUA_USE_wxFileName))||((wxLUA_USE_wxFile && wxUSE_FILE) && ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileName)))
+#if (((wxCHECK_VERSION(2,8,0) && wxUSE_FILE) && (wxLUA_USE_wxFileName)) && (wxLUA_USE_wxFile && wxUSE_FILE))||((wxCHECK_VERSION(2,8,0) && (wxUSE_FILE || wxUSE_FFILE )) && (wxLUA_USE_wxFileName))||(((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileName)) && (wxLUA_USE_wxFile && wxUSE_FILE))
     { "AssignTempFileName", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_AssignTempFileName_overload, s_wxluafunc_wxLua_wxFileName_AssignTempFileName_overload_count, 0 },
-#endif // ((wxLUA_USE_wxFile && wxUSE_FILE) && ((wxCHECK_VERSION(2,8,0) && wxUSE_FILE) && (wxLUA_USE_wxFileName)))||((wxCHECK_VERSION(2,8,0) && (wxUSE_FILE || wxUSE_FFILE )) && (wxLUA_USE_wxFileName))||((wxLUA_USE_wxFile && wxUSE_FILE) && ((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileName)))
+#endif // (((wxCHECK_VERSION(2,8,0) && wxUSE_FILE) && (wxLUA_USE_wxFileName)) && (wxLUA_USE_wxFile && wxUSE_FILE))||((wxCHECK_VERSION(2,8,0) && (wxUSE_FILE || wxUSE_FFILE )) && (wxLUA_USE_wxFileName))||(((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxFileName)) && (wxLUA_USE_wxFile && wxUSE_FILE))
 
     { "Clear", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_Clear, 1, NULL },
     { "ClearExt", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_ClearExt, 1, NULL },
@@ -2510,9 +2510,9 @@ wxLuaBindMethod wxFileName_methods[] = {
     { "GetCwd", WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, s_wxluafunc_wxLua_wxFileName_GetCwd, 1, NULL },
     { "GetDirCount", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_GetDirCount, 1, NULL },
 
-#if (wxLUA_USE_wxArrayString) && (wxLUA_USE_wxFileName)
+#if (wxLUA_USE_wxFileName) && (wxLUA_USE_wxArrayString)
     { "GetDirs", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_GetDirs, 1, NULL },
-#endif // (wxLUA_USE_wxArrayString) && (wxLUA_USE_wxFileName)
+#endif // (wxLUA_USE_wxFileName) && (wxLUA_USE_wxArrayString)
 
     { "GetExt", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_GetExt, 1, NULL },
     { "GetForbiddenChars", WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, s_wxluafunc_wxLua_wxFileName_GetForbiddenChars, 1, NULL },
@@ -2527,9 +2527,9 @@ wxLuaBindMethod wxFileName_methods[] = {
 
     { "GetLongPath", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_GetLongPath, 1, NULL },
 
-#if (wxLUA_USE_wxDateTime && wxUSE_DATETIME) && (wxLUA_USE_wxFileName)
+#if (wxLUA_USE_wxFileName) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)
     { "GetModificationTime", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_GetModificationTime, 1, NULL },
-#endif // (wxLUA_USE_wxDateTime && wxUSE_DATETIME) && (wxLUA_USE_wxFileName)
+#endif // (wxLUA_USE_wxFileName) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)
 
     { "GetName", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_GetName, 1, NULL },
     { "GetPath", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_GetPath, 1, NULL },
@@ -2539,9 +2539,9 @@ wxLuaBindMethod wxFileName_methods[] = {
     { "GetPathWithSep", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_GetPathWithSep, 1, NULL },
     { "GetShortPath", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_GetShortPath, 1, NULL },
 
-#if ((wxUSE_LONGLONG) && ((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0))))
+#if (((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0))) && (wxUSE_LONGLONG))
     { "GetSize", WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, s_wxluafunc_wxLua_wxFileName_GetSize_overload, s_wxluafunc_wxLua_wxFileName_GetSize_overload_count, 0 },
-#endif // ((wxUSE_LONGLONG) && ((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0))))
+#endif // (((wxLUA_USE_wxFileName) && (wxCHECK_VERSION(2,8,0))) && (wxUSE_LONGLONG))
 
     { "GetTimes", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_GetTimes, 1, NULL },
     { "GetVolume", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_GetVolume, 1, NULL },
@@ -2592,9 +2592,9 @@ wxLuaBindMethod wxFileName_methods[] = {
     { "SetFullName", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_SetFullName, 1, NULL },
     { "SetName", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_SetName, 1, NULL },
 
-#if (wxLUA_USE_wxDateTime && wxUSE_DATETIME) && (wxLUA_USE_wxFileName)
+#if (wxLUA_USE_wxFileName) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)
     { "SetTimes", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_SetTimes, 1, NULL },
-#endif // (wxLUA_USE_wxDateTime && wxUSE_DATETIME) && (wxLUA_USE_wxFileName)
+#endif // (wxLUA_USE_wxFileName) && (wxLUA_USE_wxDateTime && wxUSE_DATETIME)
 
     { "SetVolume", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileName_SetVolume, 1, NULL },
     { "SplitPath", WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, s_wxluafunc_wxLua_wxFileName_SplitPath, 1, NULL },
@@ -3461,7 +3461,7 @@ static int LUACALL wxLua_wxDir_GetNext(lua_State *L)
 
 
 
-#if (wxUSE_LONGLONG) && ((wxLUA_USE_wxDir) && (wxCHECK_VERSION(2,8,0)))
+#if ((wxLUA_USE_wxDir) && (wxCHECK_VERSION(2,8,0))) && (wxUSE_LONGLONG)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxDir_GetTotalSize[] = { &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxDir_GetTotalSize(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxDir_GetTotalSize[1] = {{ wxLua_wxDir_GetTotalSize, WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, 1, 1, s_wxluatypeArray_wxLua_wxDir_GetTotalSize }};
@@ -3481,7 +3481,7 @@ static int LUACALL wxLua_wxDir_GetTotalSize(lua_State *L)
     return 1;
 }
 
-#endif // (wxUSE_LONGLONG) && ((wxLUA_USE_wxDir) && (wxCHECK_VERSION(2,8,0)))
+#endif // ((wxLUA_USE_wxDir) && (wxCHECK_VERSION(2,8,0))) && (wxUSE_LONGLONG)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxDir_HasFiles[] = { &wxluatype_wxDir, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxDir_HasFiles(lua_State *L);
@@ -3626,9 +3626,9 @@ wxLuaBindMethod wxDir_methods[] = {
     { "GetName", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxDir_GetName, 1, NULL },
     { "GetNext", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxDir_GetNext, 1, NULL },
 
-#if (wxUSE_LONGLONG) && ((wxLUA_USE_wxDir) && (wxCHECK_VERSION(2,8,0)))
+#if ((wxLUA_USE_wxDir) && (wxCHECK_VERSION(2,8,0))) && (wxUSE_LONGLONG)
     { "GetTotalSize", WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, s_wxluafunc_wxLua_wxDir_GetTotalSize, 1, NULL },
-#endif // (wxUSE_LONGLONG) && ((wxLUA_USE_wxDir) && (wxCHECK_VERSION(2,8,0)))
+#endif // ((wxLUA_USE_wxDir) && (wxCHECK_VERSION(2,8,0))) && (wxUSE_LONGLONG)
 
     { "HasFiles", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxDir_HasFiles, 1, NULL },
     { "HasSubDirs", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxDir_HasSubDirs, 1, NULL },
@@ -5088,7 +5088,7 @@ static int LUACALL wxLua_wxInputStream_Read(lua_State *L)
 
 
 
-#if (wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#if (wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxInputStream_SeekI[] = { &wxluatype_wxInputStream, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxInputStream_SeekI(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxInputStream_SeekI[1] = {{ wxLua_wxInputStream_SeekI, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxInputStream_SeekI }};
@@ -5111,7 +5111,7 @@ static int LUACALL wxLua_wxInputStream_SeekI(lua_State *L)
     return 1;
 }
 
-#endif // (wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#endif // (wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxInputStream_TellI[] = { &wxluatype_wxInputStream, NULL };
 static int LUACALL wxLua_wxInputStream_TellI(lua_State *L);
@@ -5210,9 +5210,9 @@ wxLuaBindMethod wxInputStream_methods[] = {
     { "Read", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxInputStream_Read_overload, s_wxluafunc_wxLua_wxInputStream_Read_overload_count, 0 },
 #endif // (wxUSE_STREAMS)
 
-#if (wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#if (wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS)
     { "SeekI", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxInputStream_SeekI, 1, NULL },
-#endif // (wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#endif // (wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS)
 
     { "TellI", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxInputStream_TellI, 1, NULL },
 
@@ -5285,7 +5285,7 @@ static int LUACALL wxLua_wxOutputStream_PutC(lua_State *L)
 }
 
 
-#if (wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#if (wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxOutputStream_SeekO[] = { &wxluatype_wxOutputStream, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxOutputStream_SeekO(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxOutputStream_SeekO[1] = {{ wxLua_wxOutputStream_SeekO, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxOutputStream_SeekO }};
@@ -5308,7 +5308,7 @@ static int LUACALL wxLua_wxOutputStream_SeekO(lua_State *L)
     return 1;
 }
 
-#endif // (wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#endif // (wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxOutputStream_TellO[] = { &wxluatype_wxOutputStream, NULL };
 static int LUACALL wxLua_wxOutputStream_TellO(lua_State *L);
@@ -5392,9 +5392,9 @@ wxLuaBindMethod wxOutputStream_methods[] = {
     { "LastWrite", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxOutputStream_LastWrite, 1, NULL },
     { "PutC", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxOutputStream_PutC, 1, NULL },
 
-#if (wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#if (wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS)
     { "SeekO", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxOutputStream_SeekO, 1, NULL },
-#endif // (wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#endif // (wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS)
 
     { "TellO", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxOutputStream_TellO, 1, NULL },
 
@@ -5438,7 +5438,7 @@ static wxLuaArgType s_wxluatypeArray_wxLua_wxFileInputStream_delete[] = { &wxlua
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileInputStream_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxFileInputStream_delete }};
 
 
-#if (wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#if (wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileInputStream_constructor1[] = { &wxluatype_wxFile, NULL };
 static int LUACALL wxLua_wxFileInputStream_constructor1(lua_State *L);
 // static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileInputStream_constructor1[1] = {{ wxLua_wxFileInputStream_constructor1, WXLUAMETHOD_CONSTRUCTOR, 1, 1, s_wxluatypeArray_wxLua_wxFileInputStream_constructor1 }};
@@ -5457,7 +5457,7 @@ static int LUACALL wxLua_wxFileInputStream_constructor1(lua_State *L)
     return 1;
 }
 
-#endif // (wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#endif // (wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileInputStream_constructor[] = { &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxFileInputStream_constructor(lua_State *L);
@@ -5480,19 +5480,19 @@ static int LUACALL wxLua_wxFileInputStream_constructor(lua_State *L)
 
 
 
-#if ((wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE))||(wxUSE_STREAMS)
+#if ((wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS))||(wxUSE_STREAMS)
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileInputStream_constructor_overload[] =
 {
 
-#if (wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#if (wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS)
     { wxLua_wxFileInputStream_constructor1, WXLUAMETHOD_CONSTRUCTOR, 1, 1, s_wxluatypeArray_wxLua_wxFileInputStream_constructor1 },
-#endif // (wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#endif // (wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS)
     { wxLua_wxFileInputStream_constructor, WXLUAMETHOD_CONSTRUCTOR, 1, 1, s_wxluatypeArray_wxLua_wxFileInputStream_constructor },
 };
 static int s_wxluafunc_wxLua_wxFileInputStream_constructor_overload_count = sizeof(s_wxluafunc_wxLua_wxFileInputStream_constructor_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // ((wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE))||(wxUSE_STREAMS)
+#endif // ((wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS))||(wxUSE_STREAMS)
 
 void wxLua_wxFileInputStream_delete_function(void** p)
 {
@@ -5505,9 +5505,9 @@ wxLuaBindMethod wxFileInputStream_methods[] = {
     { "Ok", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileInputStream_Ok, 1, NULL },
     { "delete", WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, s_wxluafunc_wxLua_wxFileInputStream_delete, 1, NULL },
 
-#if ((wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE))||(wxUSE_STREAMS)
+#if ((wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS))||(wxUSE_STREAMS)
     { "wxFileInputStream", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxFileInputStream_constructor_overload, s_wxluafunc_wxLua_wxFileInputStream_constructor_overload_count, 0 },
-#endif // ((wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE))||(wxUSE_STREAMS)
+#endif // ((wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS))||(wxUSE_STREAMS)
 
     { 0, 0, 0, 0 },
 };
@@ -5545,7 +5545,7 @@ static wxLuaArgType s_wxluatypeArray_wxLua_wxFileOutputStream_delete[] = { &wxlu
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileOutputStream_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxFileOutputStream_delete }};
 
 
-#if (wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#if (wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileOutputStream_constructor1[] = { &wxluatype_wxFile, NULL };
 static int LUACALL wxLua_wxFileOutputStream_constructor1(lua_State *L);
 // static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileOutputStream_constructor1[1] = {{ wxLua_wxFileOutputStream_constructor1, WXLUAMETHOD_CONSTRUCTOR, 1, 1, s_wxluatypeArray_wxLua_wxFileOutputStream_constructor1 }};
@@ -5564,7 +5564,7 @@ static int LUACALL wxLua_wxFileOutputStream_constructor1(lua_State *L)
     return 1;
 }
 
-#endif // (wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#endif // (wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileOutputStream_constructor[] = { &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxFileOutputStream_constructor(lua_State *L);
@@ -5587,19 +5587,19 @@ static int LUACALL wxLua_wxFileOutputStream_constructor(lua_State *L)
 
 
 
-#if ((wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE))||(wxUSE_STREAMS)
+#if ((wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS))||(wxUSE_STREAMS)
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileOutputStream_constructor_overload[] =
 {
 
-#if (wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#if (wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS)
     { wxLua_wxFileOutputStream_constructor1, WXLUAMETHOD_CONSTRUCTOR, 1, 1, s_wxluatypeArray_wxLua_wxFileOutputStream_constructor1 },
-#endif // (wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#endif // (wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS)
     { wxLua_wxFileOutputStream_constructor, WXLUAMETHOD_CONSTRUCTOR, 1, 1, s_wxluatypeArray_wxLua_wxFileOutputStream_constructor },
 };
 static int s_wxluafunc_wxLua_wxFileOutputStream_constructor_overload_count = sizeof(s_wxluafunc_wxLua_wxFileOutputStream_constructor_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // ((wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE))||(wxUSE_STREAMS)
+#endif // ((wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS))||(wxUSE_STREAMS)
 
 void wxLua_wxFileOutputStream_delete_function(void** p)
 {
@@ -5612,9 +5612,9 @@ wxLuaBindMethod wxFileOutputStream_methods[] = {
     { "Ok", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileOutputStream_Ok, 1, NULL },
     { "delete", WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, s_wxluafunc_wxLua_wxFileOutputStream_delete, 1, NULL },
 
-#if ((wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE))||(wxUSE_STREAMS)
+#if ((wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS))||(wxUSE_STREAMS)
     { "wxFileOutputStream", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxFileOutputStream_constructor_overload, s_wxluafunc_wxLua_wxFileOutputStream_constructor_overload_count, 0 },
-#endif // ((wxUSE_STREAMS) && (wxLUA_USE_wxFile && wxUSE_FILE))||(wxUSE_STREAMS)
+#endif // ((wxLUA_USE_wxFile && wxUSE_FILE) && (wxUSE_STREAMS))||(wxUSE_STREAMS)
 
     { 0, 0, 0, 0 },
 };
@@ -6158,7 +6158,7 @@ static wxLuaArgType s_wxluatypeArray_wxLua_wxFSFile_delete[] = { &wxluatype_wxFS
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFSFile_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxFSFile_delete }};
 
 
-#if ((wxLUA_USE_wxDateTime && wxUSE_DATETIME) && (wxUSE_STREAMS)) && ((wxUSE_STREAMS) && (wxUSE_FILESYSTEM))
+#if ((wxLUA_USE_wxDateTime && wxUSE_DATETIME) && ((wxUSE_STREAMS) && (wxUSE_FILESYSTEM))) && (wxUSE_STREAMS)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFSFile_constructor[] = { &wxluatype_wxInputStream, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_TSTRING, &wxluatype_wxDateTime, NULL };
 static int LUACALL wxLua_wxFSFile_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFSFile_constructor[1] = {{ wxLua_wxFSFile_constructor, WXLUAMETHOD_CONSTRUCTOR, 5, 5, s_wxluatypeArray_wxLua_wxFSFile_constructor }};
@@ -6186,7 +6186,7 @@ static int LUACALL wxLua_wxFSFile_constructor(lua_State *L)
     return 1;
 }
 
-#endif // ((wxLUA_USE_wxDateTime && wxUSE_DATETIME) && (wxUSE_STREAMS)) && ((wxUSE_STREAMS) && (wxUSE_FILESYSTEM))
+#endif // ((wxLUA_USE_wxDateTime && wxUSE_DATETIME) && ((wxUSE_STREAMS) && (wxUSE_FILESYSTEM))) && (wxUSE_STREAMS)
 
 
 
@@ -6217,9 +6217,9 @@ wxLuaBindMethod wxFSFile_methods[] = {
 
     { "delete", WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, s_wxluafunc_wxLua_wxFSFile_delete, 1, NULL },
 
-#if ((wxLUA_USE_wxDateTime && wxUSE_DATETIME) && (wxUSE_STREAMS)) && ((wxUSE_STREAMS) && (wxUSE_FILESYSTEM))
+#if ((wxLUA_USE_wxDateTime && wxUSE_DATETIME) && ((wxUSE_STREAMS) && (wxUSE_FILESYSTEM))) && (wxUSE_STREAMS)
     { "wxFSFile", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxFSFile_constructor, 1, NULL },
-#endif // ((wxLUA_USE_wxDateTime && wxUSE_DATETIME) && (wxUSE_STREAMS)) && ((wxUSE_STREAMS) && (wxUSE_FILESYSTEM))
+#endif // ((wxLUA_USE_wxDateTime && wxUSE_DATETIME) && ((wxUSE_STREAMS) && (wxUSE_FILESYSTEM))) && (wxUSE_STREAMS)
 
     { 0, 0, 0, 0 },
 };
@@ -6881,7 +6881,7 @@ static int LUACALL wxLua_wxFileSystemWatcherEvent_GetErrorDescription(lua_State 
 }
 
 
-#if (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#if (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileSystemWatcherEvent_GetNewPath[] = { &wxluatype_wxFileSystemWatcherEvent, NULL };
 static int LUACALL wxLua_wxFileSystemWatcherEvent_GetNewPath(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileSystemWatcherEvent_GetNewPath[1] = {{ wxLua_wxFileSystemWatcherEvent_GetNewPath, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxFileSystemWatcherEvent_GetNewPath }};
@@ -6914,7 +6914,7 @@ static int LUACALL wxLua_wxFileSystemWatcherEvent_GetPath(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#endif // (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileSystemWatcherEvent_GetWarningType[] = { &wxluatype_wxFileSystemWatcherEvent, NULL };
 static int LUACALL wxLua_wxFileSystemWatcherEvent_GetWarningType(lua_State *L);
@@ -6949,7 +6949,7 @@ static int LUACALL wxLua_wxFileSystemWatcherEvent_IsError(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#if (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileSystemWatcherEvent_SetNewPath[] = { &wxluatype_wxFileSystemWatcherEvent, &wxluatype_wxFileName, NULL };
 static int LUACALL wxLua_wxFileSystemWatcherEvent_SetNewPath(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileSystemWatcherEvent_SetNewPath[1] = {{ wxLua_wxFileSystemWatcherEvent_SetNewPath, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxFileSystemWatcherEvent_SetNewPath }};
@@ -6982,7 +6982,7 @@ static int LUACALL wxLua_wxFileSystemWatcherEvent_SetPath(lua_State *L)
     return 0;
 }
 
-#endif // (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#endif // (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileSystemWatcherEvent_ToString[] = { &wxluatype_wxFileSystemWatcherEvent, NULL };
 static int LUACALL wxLua_wxFileSystemWatcherEvent_ToString(lua_State *L);
@@ -7004,7 +7004,7 @@ static wxLuaArgType s_wxluatypeArray_wxLua_wxFileSystemWatcherEvent_delete[] = {
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileSystemWatcherEvent_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxFileSystemWatcherEvent_delete }};
 
 
-#if (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#if (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileSystemWatcherEvent_constructor2[] = { &wxluatype_TINTEGER, &wxluatype_wxFileName, &wxluatype_wxFileName, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxFileSystemWatcherEvent_constructor2(lua_State *L);
 // static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileSystemWatcherEvent_constructor2[1] = {{ wxLua_wxFileSystemWatcherEvent_constructor2, WXLUAMETHOD_CONSTRUCTOR, 3, 4, s_wxluatypeArray_wxLua_wxFileSystemWatcherEvent_constructor2 }};
@@ -7031,7 +7031,7 @@ static int LUACALL wxLua_wxFileSystemWatcherEvent_constructor2(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#endif // (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileSystemWatcherEvent_constructor1[] = { &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_TSTRING, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxFileSystemWatcherEvent_constructor1(lua_State *L);
@@ -7084,20 +7084,20 @@ static int LUACALL wxLua_wxFileSystemWatcherEvent_constructor(lua_State *L)
 
 
 
-#if ((wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)))||(wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#if ((wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName))||(wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileSystemWatcherEvent_constructor_overload[] =
 {
 
-#if (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#if (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
     { wxLua_wxFileSystemWatcherEvent_constructor2, WXLUAMETHOD_CONSTRUCTOR, 3, 4, s_wxluatypeArray_wxLua_wxFileSystemWatcherEvent_constructor2 },
-#endif // (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#endif // (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
     { wxLua_wxFileSystemWatcherEvent_constructor1, WXLUAMETHOD_CONSTRUCTOR, 2, 4, s_wxluatypeArray_wxLua_wxFileSystemWatcherEvent_constructor1 },
     { wxLua_wxFileSystemWatcherEvent_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 2, s_wxluatypeArray_wxLua_wxFileSystemWatcherEvent_constructor },
 };
 static int s_wxluafunc_wxLua_wxFileSystemWatcherEvent_constructor_overload_count = sizeof(s_wxluafunc_wxLua_wxFileSystemWatcherEvent_constructor_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // ((wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)))||(wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#endif // ((wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName))||(wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
 
 void wxLua_wxFileSystemWatcherEvent_delete_function(void** p)
 {
@@ -7110,25 +7110,25 @@ wxLuaBindMethod wxFileSystemWatcherEvent_methods[] = {
     { "GetChangeType", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileSystemWatcherEvent_GetChangeType, 1, NULL },
     { "GetErrorDescription", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileSystemWatcherEvent_GetErrorDescription, 1, NULL },
 
-#if (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#if (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
     { "GetNewPath", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileSystemWatcherEvent_GetNewPath, 1, NULL },
     { "GetPath", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileSystemWatcherEvent_GetPath, 1, NULL },
-#endif // (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#endif // (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
 
     { "GetWarningType", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileSystemWatcherEvent_GetWarningType, 1, NULL },
     { "IsError", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileSystemWatcherEvent_IsError, 1, NULL },
 
-#if (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#if (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
     { "SetNewPath", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileSystemWatcherEvent_SetNewPath, 1, NULL },
     { "SetPath", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileSystemWatcherEvent_SetPath, 1, NULL },
-#endif // (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#endif // (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
 
     { "ToString", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileSystemWatcherEvent_ToString, 1, NULL },
     { "delete", WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, s_wxluafunc_wxLua_wxFileSystemWatcherEvent_delete, 1, NULL },
 
-#if ((wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)))||(wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#if ((wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName))||(wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
     { "wxFileSystemWatcherEvent", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxFileSystemWatcherEvent_constructor_overload, s_wxluafunc_wxLua_wxFileSystemWatcherEvent_constructor_overload_count, 0 },
-#endif // ((wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)))||(wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#endif // ((wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName))||(wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
 
     { 0, 0, 0, 0 },
 };
@@ -7146,7 +7146,7 @@ int wxFileSystemWatcherEvent_methodCount = sizeof(wxFileSystemWatcherEvent_metho
 // Lua MetaTable Tag for Class 'wxFileSystemWatcher'
 int wxluatype_wxFileSystemWatcher = WXLUA_TUNKNOWN;
 
-#if (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#if (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileSystemWatcher_Add[] = { &wxluatype_wxFileSystemWatcher, &wxluatype_wxFileName, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxFileSystemWatcher_Add(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileSystemWatcher_Add[1] = {{ wxLua_wxFileSystemWatcher_Add, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxFileSystemWatcher_Add }};
@@ -7219,7 +7219,7 @@ static int LUACALL wxLua_wxFileSystemWatcher_AddTree(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#endif // (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileSystemWatcher_GetOwner[] = { &wxluatype_wxFileSystemWatcher, NULL };
 static int LUACALL wxLua_wxFileSystemWatcher_GetOwner(lua_State *L);
@@ -7238,7 +7238,7 @@ static int LUACALL wxLua_wxFileSystemWatcher_GetOwner(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxArrayString) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#if (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxArrayString)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileSystemWatcher_GetWatchedPaths[] = { &wxluatype_wxFileSystemWatcher, &wxluatype_wxArrayString, NULL };
 static int LUACALL wxLua_wxFileSystemWatcher_GetWatchedPaths(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileSystemWatcher_GetWatchedPaths[1] = {{ wxLua_wxFileSystemWatcher_GetWatchedPaths, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxFileSystemWatcher_GetWatchedPaths }};
@@ -7257,7 +7257,7 @@ static int LUACALL wxLua_wxFileSystemWatcher_GetWatchedPaths(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxArrayString) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#endif // (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxArrayString)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileSystemWatcher_GetWatchedPathsCount[] = { &wxluatype_wxFileSystemWatcher, NULL };
 static int LUACALL wxLua_wxFileSystemWatcher_GetWatchedPathsCount(lua_State *L);
@@ -7276,7 +7276,7 @@ static int LUACALL wxLua_wxFileSystemWatcher_GetWatchedPathsCount(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#if (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileSystemWatcher_Remove[] = { &wxluatype_wxFileSystemWatcher, &wxluatype_wxFileName, NULL };
 static int LUACALL wxLua_wxFileSystemWatcher_Remove(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileSystemWatcher_Remove[1] = {{ wxLua_wxFileSystemWatcher_Remove, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxFileSystemWatcher_Remove }};
@@ -7295,7 +7295,7 @@ static int LUACALL wxLua_wxFileSystemWatcher_Remove(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#endif // (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileSystemWatcher_RemoveAll[] = { &wxluatype_wxFileSystemWatcher, NULL };
 static int LUACALL wxLua_wxFileSystemWatcher_RemoveAll(lua_State *L);
@@ -7314,7 +7314,7 @@ static int LUACALL wxLua_wxFileSystemWatcher_RemoveAll(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#if (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileSystemWatcher_RemoveTree[] = { &wxluatype_wxFileSystemWatcher, &wxluatype_wxFileName, NULL };
 static int LUACALL wxLua_wxFileSystemWatcher_RemoveTree(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxFileSystemWatcher_RemoveTree[1] = {{ wxLua_wxFileSystemWatcher_RemoveTree, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxFileSystemWatcher_RemoveTree }};
@@ -7333,7 +7333,7 @@ static int LUACALL wxLua_wxFileSystemWatcher_RemoveTree(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#endif // (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxFileSystemWatcher_SetOwner[] = { &wxluatype_wxFileSystemWatcher, &wxluatype_wxEvtHandler, NULL };
 static int LUACALL wxLua_wxFileSystemWatcher_SetOwner(lua_State *L);
@@ -7375,29 +7375,29 @@ void wxLua_wxFileSystemWatcher_delete_function(void** p)
 
 // Map Lua Class Methods to C Binding Functions
 wxLuaBindMethod wxFileSystemWatcher_methods[] = {
-#if (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#if (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
     { "Add", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileSystemWatcher_Add, 1, NULL },
     { "AddAny", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileSystemWatcher_AddAny, 1, NULL },
     { "AddTree", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileSystemWatcher_AddTree, 1, NULL },
-#endif // (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#endif // (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
 
     { "GetOwner", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileSystemWatcher_GetOwner, 1, NULL },
 
-#if (wxLUA_USE_wxArrayString) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#if (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxArrayString)
     { "GetWatchedPaths", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileSystemWatcher_GetWatchedPaths, 1, NULL },
-#endif // (wxLUA_USE_wxArrayString) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#endif // (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxArrayString)
 
     { "GetWatchedPathsCount", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileSystemWatcher_GetWatchedPathsCount, 1, NULL },
 
-#if (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#if (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
     { "Remove", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileSystemWatcher_Remove, 1, NULL },
-#endif // (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#endif // (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
 
     { "RemoveAll", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileSystemWatcher_RemoveAll, 1, NULL },
 
-#if (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#if (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
     { "RemoveTree", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileSystemWatcher_RemoveTree, 1, NULL },
-#endif // (wxLUA_USE_wxFileName) && (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4))
+#endif // (wxUSE_FSWATCHER && wxCHECK_VERSION(2,9,4)) && (wxLUA_USE_wxFileName)
 
     { "SetOwner", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxFileSystemWatcher_SetOwner, 1, NULL },
     { "wxFileSystemWatcher", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxFileSystemWatcher_constructor, 1, NULL },

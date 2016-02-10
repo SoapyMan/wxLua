@@ -2145,7 +2145,7 @@ static wxLuaArgType s_wxluatypeArray_wxLua_wxCriticalSectionLocker_delete[] = { 
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxCriticalSectionLocker_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxCriticalSectionLocker_delete }};
 
 
-#if (wxLUA_USE_wxCriticalSectionLocker && wxUSE_THREADS) && (wxLUA_USE_wxCriticalSection && wxUSE_THREADS)
+#if (wxLUA_USE_wxCriticalSection && wxUSE_THREADS) && (wxLUA_USE_wxCriticalSectionLocker && wxUSE_THREADS)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxCriticalSectionLocker_constructor[] = { &wxluatype_wxCriticalSection, NULL };
 static int LUACALL wxLua_wxCriticalSectionLocker_constructor(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxCriticalSectionLocker_constructor[1] = {{ wxLua_wxCriticalSectionLocker_constructor, WXLUAMETHOD_CONSTRUCTOR, 1, 1, s_wxluatypeArray_wxLua_wxCriticalSectionLocker_constructor }};
@@ -2164,7 +2164,7 @@ static int LUACALL wxLua_wxCriticalSectionLocker_constructor(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxCriticalSectionLocker && wxUSE_THREADS) && (wxLUA_USE_wxCriticalSection && wxUSE_THREADS)
+#endif // (wxLUA_USE_wxCriticalSection && wxUSE_THREADS) && (wxLUA_USE_wxCriticalSectionLocker && wxUSE_THREADS)
 
 
 
@@ -2178,9 +2178,9 @@ void wxLua_wxCriticalSectionLocker_delete_function(void** p)
 wxLuaBindMethod wxCriticalSectionLocker_methods[] = {
     { "delete", WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, s_wxluafunc_wxLua_wxCriticalSectionLocker_delete, 1, NULL },
 
-#if (wxLUA_USE_wxCriticalSectionLocker && wxUSE_THREADS) && (wxLUA_USE_wxCriticalSection && wxUSE_THREADS)
+#if (wxLUA_USE_wxCriticalSection && wxUSE_THREADS) && (wxLUA_USE_wxCriticalSectionLocker && wxUSE_THREADS)
     { "wxCriticalSectionLocker", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxCriticalSectionLocker_constructor, 1, NULL },
-#endif // (wxLUA_USE_wxCriticalSectionLocker && wxUSE_THREADS) && (wxLUA_USE_wxCriticalSection && wxUSE_THREADS)
+#endif // (wxLUA_USE_wxCriticalSection && wxUSE_THREADS) && (wxLUA_USE_wxCriticalSectionLocker && wxUSE_THREADS)
 
     { 0, 0, 0, 0 },
 };

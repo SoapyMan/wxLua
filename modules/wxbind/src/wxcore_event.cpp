@@ -4350,7 +4350,7 @@ static wxLuaArgType s_wxluatypeArray_wxLua_wxHelpEvent_delete[] = { &wxluatype_w
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxHelpEvent_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxHelpEvent_delete }};
 
 
-#if (wxLUA_USE_wxPointSizeRect) && (wxCHECK_VERSION(2,8,0))
+#if (wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxPointSizeRect)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxHelpEvent_constructor1[] = { &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_wxPoint, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxHelpEvent_constructor1(lua_State *L);
 // static wxLuaBindCFunc s_wxluafunc_wxLua_wxHelpEvent_constructor1[1] = {{ wxLua_wxHelpEvent_constructor1, WXLUAMETHOD_CONSTRUCTOR, 0, 4, s_wxluatypeArray_wxLua_wxHelpEvent_constructor1 }};
@@ -4377,9 +4377,9 @@ static int LUACALL wxLua_wxHelpEvent_constructor1(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxPointSizeRect) && (wxCHECK_VERSION(2,8,0))
+#endif // (wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxPointSizeRect)
 
-#if (!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxPointSizeRect)
+#if (wxLUA_USE_wxPointSizeRect) && (!wxCHECK_VERSION(2,8,0))
 static wxLuaArgType s_wxluatypeArray_wxLua_wxHelpEvent_constructor[] = { &wxluatype_TINTEGER, &wxluatype_TINTEGER, &wxluatype_wxPoint, NULL };
 static int LUACALL wxLua_wxHelpEvent_constructor(lua_State *L);
 // static wxLuaBindCFunc s_wxluafunc_wxLua_wxHelpEvent_constructor[1] = {{ wxLua_wxHelpEvent_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 3, s_wxluatypeArray_wxLua_wxHelpEvent_constructor }};
@@ -4404,26 +4404,26 @@ static int LUACALL wxLua_wxHelpEvent_constructor(lua_State *L)
     return 1;
 }
 
-#endif // (!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxPointSizeRect)
+#endif // (wxLUA_USE_wxPointSizeRect) && (!wxCHECK_VERSION(2,8,0))
 
 
 
-#if ((wxLUA_USE_wxPointSizeRect) && (wxCHECK_VERSION(2,8,0)))||((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxPointSizeRect))
+#if ((wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxPointSizeRect))||((wxLUA_USE_wxPointSizeRect) && (!wxCHECK_VERSION(2,8,0)))
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxHelpEvent_constructor_overload[] =
 {
 
-#if (wxLUA_USE_wxPointSizeRect) && (wxCHECK_VERSION(2,8,0))
+#if (wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxPointSizeRect)
     { wxLua_wxHelpEvent_constructor1, WXLUAMETHOD_CONSTRUCTOR, 0, 4, s_wxluatypeArray_wxLua_wxHelpEvent_constructor1 },
-#endif // (wxLUA_USE_wxPointSizeRect) && (wxCHECK_VERSION(2,8,0))
+#endif // (wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxPointSizeRect)
 
-#if (!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxPointSizeRect)
+#if (wxLUA_USE_wxPointSizeRect) && (!wxCHECK_VERSION(2,8,0))
     { wxLua_wxHelpEvent_constructor, WXLUAMETHOD_CONSTRUCTOR, 0, 3, s_wxluatypeArray_wxLua_wxHelpEvent_constructor },
-#endif // (!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxPointSizeRect)
+#endif // (wxLUA_USE_wxPointSizeRect) && (!wxCHECK_VERSION(2,8,0))
 };
 static int s_wxluafunc_wxLua_wxHelpEvent_constructor_overload_count = sizeof(s_wxluafunc_wxLua_wxHelpEvent_constructor_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // ((wxLUA_USE_wxPointSizeRect) && (wxCHECK_VERSION(2,8,0)))||((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxPointSizeRect))
+#endif // ((wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxPointSizeRect))||((wxLUA_USE_wxPointSizeRect) && (!wxCHECK_VERSION(2,8,0)))
 
 void wxLua_wxHelpEvent_delete_function(void** p)
 {
@@ -4457,9 +4457,9 @@ wxLuaBindMethod wxHelpEvent_methods[] = {
     { "SetTarget", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxHelpEvent_SetTarget, 1, NULL },
     { "delete", WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, s_wxluafunc_wxLua_wxHelpEvent_delete, 1, NULL },
 
-#if ((wxLUA_USE_wxPointSizeRect) && (wxCHECK_VERSION(2,8,0)))||((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxPointSizeRect))
+#if ((wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxPointSizeRect))||((wxLUA_USE_wxPointSizeRect) && (!wxCHECK_VERSION(2,8,0)))
     { "wxHelpEvent", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxHelpEvent_constructor_overload, s_wxluafunc_wxLua_wxHelpEvent_constructor_overload_count, 0 },
-#endif // ((wxLUA_USE_wxPointSizeRect) && (wxCHECK_VERSION(2,8,0)))||((!wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxPointSizeRect))
+#endif // ((wxCHECK_VERSION(2,8,0)) && (wxLUA_USE_wxPointSizeRect))||((wxLUA_USE_wxPointSizeRect) && (!wxCHECK_VERSION(2,8,0)))
 
     { 0, 0, 0, 0 },
 };

@@ -1422,7 +1422,7 @@ static int LUACALL wxLua_wxProtocol_GetError(lua_State *L)
 }
 
 
-#if (wxUSE_STREAMS) && ((wxLUA_USE_wxSocket && wxUSE_SOCKETS) && (wxUSE_PROTOCOL))
+#if ((wxLUA_USE_wxSocket && wxUSE_SOCKETS) && (wxUSE_PROTOCOL)) && (wxUSE_STREAMS)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxProtocol_GetInputStream[] = { &wxluatype_wxProtocol, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxProtocol_GetInputStream(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxProtocol_GetInputStream[1] = {{ wxLua_wxProtocol_GetInputStream, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxProtocol_GetInputStream }};
@@ -1441,7 +1441,7 @@ static int LUACALL wxLua_wxProtocol_GetInputStream(lua_State *L)
     return 1;
 }
 
-#endif // (wxUSE_STREAMS) && ((wxLUA_USE_wxSocket && wxUSE_SOCKETS) && (wxUSE_PROTOCOL))
+#endif // ((wxLUA_USE_wxSocket && wxUSE_SOCKETS) && (wxUSE_PROTOCOL)) && (wxUSE_STREAMS)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxProtocol_Reconnect[] = { &wxluatype_wxProtocol, NULL };
 static int LUACALL wxLua_wxProtocol_Reconnect(lua_State *L);
@@ -1509,9 +1509,9 @@ wxLuaBindMethod wxProtocol_methods[] = {
     { "GetContentType", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxProtocol_GetContentType, 1, NULL },
     { "GetError", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxProtocol_GetError, 1, NULL },
 
-#if (wxUSE_STREAMS) && ((wxLUA_USE_wxSocket && wxUSE_SOCKETS) && (wxUSE_PROTOCOL))
+#if ((wxLUA_USE_wxSocket && wxUSE_SOCKETS) && (wxUSE_PROTOCOL)) && (wxUSE_STREAMS)
     { "GetInputStream", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxProtocol_GetInputStream, 1, NULL },
-#endif // (wxUSE_STREAMS) && ((wxLUA_USE_wxSocket && wxUSE_SOCKETS) && (wxUSE_PROTOCOL))
+#endif // ((wxLUA_USE_wxSocket && wxUSE_SOCKETS) && (wxUSE_PROTOCOL)) && (wxUSE_STREAMS)
 
     { "Reconnect", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxProtocol_Reconnect, 1, NULL },
     { "SetPassword", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxProtocol_SetPassword, 1, NULL },

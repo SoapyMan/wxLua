@@ -419,24 +419,11 @@ class wxHtmlWindowInterface
 #define wxHLB_DEFAULT_STYLE
 #define wxHLB_MULTIPLE
 
-class wxSimpleHtmlListBox : public wxPanel, public wxHtmlWindowInterface //: public wxHtmlListBox, public wxItemContainer
+class wxSimpleHtmlListBox : public wxPanel, public wxHtmlWindowInterface, public wxItemContainer //: public wxHtmlListBox, public wxItemContainer
 {
     wxSimpleHtmlListBox( );
     wxSimpleHtmlListBox(wxWindow *parent, wxWindowID id, const wxPoint& pos, const wxSize& size, const wxArrayString& choices, long style = wxHLB_DEFAULT_STYLE, const wxValidator& validator = wxDefaultValidator, const wxString& name = "wxSimpleHtmlListBox" );
     bool Create(wxWindow *parent, wxWindowID id, const wxPoint& pos, const wxSize& size, const wxArrayString& choices, long style = wxHLB_DEFAULT_STYLE, const wxValidator& validator = wxDefaultValidator, const wxString& name = "wxSimpleHtmlListBox" );
-
-    void SetSelection(int n );
-    int GetSelection() const;
-    virtual unsigned int GetCount() const;
-    virtual wxString GetString(unsigned int n) const;
-    wxArrayString GetStrings() const;
-    virtual void SetString(unsigned int n, const wxString& s );
-    virtual void Clear( );
-    virtual void Delete(unsigned int n );
-    void Append(const wxArrayString& strings );
-    int Append(const wxString& item );
-    int Append(const wxString& item, voidptr_long number); // C++ is (void *clientData) You can put a number here
-    int Append(const wxString& item, wxClientData *clientData );
 };
 
 #endif //%wxchkver_2_8

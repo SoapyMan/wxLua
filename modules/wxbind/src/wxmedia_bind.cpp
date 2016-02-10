@@ -167,7 +167,7 @@ static int LUACALL wxLua_wxMediaCtrl_Length(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS)
+#if (wxLUA_USE_wxSocket && wxUSE_SOCKETS) && (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxMediaCtrl_Load2[] = { &wxluatype_wxMediaCtrl, &wxluatype_wxURI, &wxluatype_wxURI, NULL };
 static int LUACALL wxLua_wxMediaCtrl_Load2(lua_State *L);
 // static wxLuaBindCFunc s_wxluafunc_wxLua_wxMediaCtrl_Load2[1] = {{ wxLua_wxMediaCtrl_Load2, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxMediaCtrl_Load2 }};
@@ -206,7 +206,7 @@ static int LUACALL wxLua_wxMediaCtrl_Load1(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS)
+#endif // (wxLUA_USE_wxSocket && wxUSE_SOCKETS) && (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxMediaCtrl_Load[] = { &wxluatype_wxMediaCtrl, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxMediaCtrl_Load(lua_State *L);
@@ -297,7 +297,7 @@ static int LUACALL wxLua_wxMediaCtrl_Play(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#if (wxLUA_USE_wxFile && wxUSE_FILE) && (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxMediaCtrl_Seek[] = { &wxluatype_wxMediaCtrl, &wxluatype_TINTEGER, &wxluatype_TINTEGER, NULL };
 static int LUACALL wxLua_wxMediaCtrl_Seek(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxMediaCtrl_Seek[1] = {{ wxLua_wxMediaCtrl_Seek, WXLUAMETHOD_METHOD, 2, 3, s_wxluatypeArray_wxLua_wxMediaCtrl_Seek }};
@@ -320,7 +320,7 @@ static int LUACALL wxLua_wxMediaCtrl_Seek(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#endif // (wxLUA_USE_wxFile && wxUSE_FILE) && (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxMediaCtrl_SetVolume[] = { &wxluatype_wxMediaCtrl, &wxluatype_TNUMBER, NULL };
 static int LUACALL wxLua_wxMediaCtrl_SetVolume(lua_State *L);
@@ -461,23 +461,23 @@ static int s_wxluafunc_wxLua_wxMediaCtrl_GetVolume_overload_count = sizeof(s_wxl
 
 #endif // (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
 
-#if ((wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS))||(wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
+#if ((wxLUA_USE_wxSocket && wxUSE_SOCKETS) && (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL))||(wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxMediaCtrl_Load_overload[] =
 {
 
-#if (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS)
+#if (wxLUA_USE_wxSocket && wxUSE_SOCKETS) && (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
     { wxLua_wxMediaCtrl_Load2, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxMediaCtrl_Load2 },
-#endif // (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS)
+#endif // (wxLUA_USE_wxSocket && wxUSE_SOCKETS) && (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
 
-#if (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS)
+#if (wxLUA_USE_wxSocket && wxUSE_SOCKETS) && (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
     { wxLua_wxMediaCtrl_Load1, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxMediaCtrl_Load1 },
-#endif // (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS)
+#endif // (wxLUA_USE_wxSocket && wxUSE_SOCKETS) && (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
     { wxLua_wxMediaCtrl_Load, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxMediaCtrl_Load },
 };
 static int s_wxluafunc_wxLua_wxMediaCtrl_Load_overload_count = sizeof(s_wxluafunc_wxLua_wxMediaCtrl_Load_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // ((wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS))||(wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
+#endif // ((wxLUA_USE_wxSocket && wxUSE_SOCKETS) && (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL))||(wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
 
 #if (((wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL) && (wxLUA_USE_wxPointSizeRect)) && (wxLUA_USE_wxValidator && wxUSE_VALIDATORS))||(wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
 // function overload table
@@ -515,18 +515,18 @@ wxLuaBindMethod wxMediaCtrl_methods[] = {
 
     { "Length", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxMediaCtrl_Length, 1, NULL },
 
-#if ((wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS))||(wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
+#if ((wxLUA_USE_wxSocket && wxUSE_SOCKETS) && (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL))||(wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
     { "Load", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxMediaCtrl_Load_overload, s_wxluafunc_wxLua_wxMediaCtrl_Load_overload_count, 0 },
-#endif // ((wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL) && (wxLUA_USE_wxSocket && wxUSE_SOCKETS))||(wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
+#endif // ((wxLUA_USE_wxSocket && wxUSE_SOCKETS) && (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL))||(wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
 
     { "LoadURI", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxMediaCtrl_LoadURI, 1, NULL },
     { "LoadURIWithProxy", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxMediaCtrl_LoadURIWithProxy, 1, NULL },
     { "Pause", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxMediaCtrl_Pause, 1, NULL },
     { "Play", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxMediaCtrl_Play, 1, NULL },
 
-#if (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#if (wxLUA_USE_wxFile && wxUSE_FILE) && (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
     { "Seek", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxMediaCtrl_Seek, 1, NULL },
-#endif // (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL) && (wxLUA_USE_wxFile && wxUSE_FILE)
+#endif // (wxLUA_USE_wxFile && wxUSE_FILE) && (wxLUA_USE_wxMediaCtrl && wxUSE_MEDIACTRL)
 
     { "SetVolume", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxMediaCtrl_SetVolume, 1, NULL },
     { "ShowPlayerControls", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxMediaCtrl_ShowPlayerControls, 1, NULL },

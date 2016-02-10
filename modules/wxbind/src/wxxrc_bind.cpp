@@ -191,7 +191,7 @@ static int LUACALL wxLua_wxXmlResource_Load(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxBitmap)
+#if (wxLUA_USE_wxBitmap) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlResource_LoadBitmap[] = { &wxluatype_wxXmlResource, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxXmlResource_LoadBitmap(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlResource_LoadBitmap[1] = {{ wxLua_wxXmlResource_LoadBitmap, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxXmlResource_LoadBitmap }};
@@ -213,9 +213,9 @@ static int LUACALL wxLua_wxXmlResource_LoadBitmap(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxBitmap)
+#endif // (wxLUA_USE_wxBitmap) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 
-#if (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxDialog)
+#if (wxLUA_USE_wxDialog) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlResource_LoadDialog1[] = { &wxluatype_wxXmlResource, &wxluatype_wxDialog, &wxluatype_wxWindow, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxXmlResource_LoadDialog1(lua_State *L);
 // static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlResource_LoadDialog1[1] = {{ wxLua_wxXmlResource_LoadDialog1, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxXmlResource_LoadDialog1 }};
@@ -258,9 +258,9 @@ static int LUACALL wxLua_wxXmlResource_LoadDialog(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxDialog)
+#endif // (wxLUA_USE_wxDialog) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 
-#if (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxFrame)
+#if (wxLUA_USE_wxFrame) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlResource_LoadFrame[] = { &wxluatype_wxXmlResource, &wxluatype_wxFrame, &wxluatype_wxWindow, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxXmlResource_LoadFrame(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlResource_LoadFrame[1] = {{ wxLua_wxXmlResource_LoadFrame, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxXmlResource_LoadFrame }};
@@ -283,9 +283,9 @@ static int LUACALL wxLua_wxXmlResource_LoadFrame(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxFrame)
+#endif // (wxLUA_USE_wxFrame) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 
-#if (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxIcon)
+#if (wxLUA_USE_wxIcon) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlResource_LoadIcon[] = { &wxluatype_wxXmlResource, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxXmlResource_LoadIcon(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlResource_LoadIcon[1] = {{ wxLua_wxXmlResource_LoadIcon, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxXmlResource_LoadIcon }};
@@ -307,9 +307,9 @@ static int LUACALL wxLua_wxXmlResource_LoadIcon(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxIcon)
+#endif // (wxLUA_USE_wxIcon) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 
-#if (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxMenu && wxUSE_MENUS)
+#if (wxLUA_USE_wxMenu && wxUSE_MENUS) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlResource_LoadMenu[] = { &wxluatype_wxXmlResource, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxXmlResource_LoadMenu(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlResource_LoadMenu[1] = {{ wxLua_wxXmlResource_LoadMenu, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxXmlResource_LoadMenu }};
@@ -366,7 +366,7 @@ static int LUACALL wxLua_wxXmlResource_LoadMenuBar(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxMenu && wxUSE_MENUS)
+#endif // (wxLUA_USE_wxMenu && wxUSE_MENUS) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlResource_LoadPanel1[] = { &wxluatype_wxXmlResource, &wxluatype_wxPanel, &wxluatype_wxWindow, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxXmlResource_LoadPanel1(lua_State *L);
@@ -411,7 +411,7 @@ static int LUACALL wxLua_wxXmlResource_LoadPanel(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxToolbar)
+#if (wxLUA_USE_wxToolbar) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlResource_LoadToolBar[] = { &wxluatype_wxXmlResource, &wxluatype_wxWindow, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxXmlResource_LoadToolBar(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlResource_LoadToolBar[1] = {{ wxLua_wxXmlResource_LoadToolBar, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxXmlResource_LoadToolBar }};
@@ -432,7 +432,7 @@ static int LUACALL wxLua_wxXmlResource_LoadToolBar(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxToolbar)
+#endif // (wxLUA_USE_wxToolbar) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxXmlResource_Set[] = { &wxluatype_wxXmlResource, NULL };
 static int LUACALL wxLua_wxXmlResource_Set(lua_State *L);
@@ -554,39 +554,39 @@ static int LUACALL wxLua_wxXmlResource_constructor(lua_State *L)
 
 
 
-#if ((wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxDialog))
+#if ((wxLUA_USE_wxDialog) && (wxLUA_USE_wxXRC && wxUSE_XRC))
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlResource_LoadDialog_overload[] =
 {
 
-#if (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxDialog)
+#if (wxLUA_USE_wxDialog) && (wxLUA_USE_wxXRC && wxUSE_XRC)
     { wxLua_wxXmlResource_LoadDialog1, WXLUAMETHOD_METHOD, 4, 4, s_wxluatypeArray_wxLua_wxXmlResource_LoadDialog1 },
-#endif // (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxDialog)
+#endif // (wxLUA_USE_wxDialog) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 
-#if (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxDialog)
+#if (wxLUA_USE_wxDialog) && (wxLUA_USE_wxXRC && wxUSE_XRC)
     { wxLua_wxXmlResource_LoadDialog, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxXmlResource_LoadDialog },
-#endif // (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxDialog)
+#endif // (wxLUA_USE_wxDialog) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 };
 static int s_wxluafunc_wxLua_wxXmlResource_LoadDialog_overload_count = sizeof(s_wxluafunc_wxLua_wxXmlResource_LoadDialog_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // ((wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxDialog))
+#endif // ((wxLUA_USE_wxDialog) && (wxLUA_USE_wxXRC && wxUSE_XRC))
 
-#if ((wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxMenu && wxUSE_MENUS))
+#if ((wxLUA_USE_wxMenu && wxUSE_MENUS) && (wxLUA_USE_wxXRC && wxUSE_XRC))
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxXmlResource_LoadMenuBar_overload[] =
 {
 
-#if (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxMenu && wxUSE_MENUS)
+#if (wxLUA_USE_wxMenu && wxUSE_MENUS) && (wxLUA_USE_wxXRC && wxUSE_XRC)
     { wxLua_wxXmlResource_LoadMenuBar1, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxXmlResource_LoadMenuBar1 },
-#endif // (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxMenu && wxUSE_MENUS)
+#endif // (wxLUA_USE_wxMenu && wxUSE_MENUS) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 
-#if (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxMenu && wxUSE_MENUS)
+#if (wxLUA_USE_wxMenu && wxUSE_MENUS) && (wxLUA_USE_wxXRC && wxUSE_XRC)
     { wxLua_wxXmlResource_LoadMenuBar, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxXmlResource_LoadMenuBar },
-#endif // (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxMenu && wxUSE_MENUS)
+#endif // (wxLUA_USE_wxMenu && wxUSE_MENUS) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 };
 static int s_wxluafunc_wxLua_wxXmlResource_LoadMenuBar_overload_count = sizeof(s_wxluafunc_wxLua_wxXmlResource_LoadMenuBar_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // ((wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxMenu && wxUSE_MENUS))
+#endif // ((wxLUA_USE_wxMenu && wxUSE_MENUS) && (wxLUA_USE_wxXRC && wxUSE_XRC))
 
 #if (wxLUA_USE_wxXRC && wxUSE_XRC)
 // function overload table
@@ -625,37 +625,37 @@ wxLuaBindMethod wxXmlResource_methods[] = {
     { "InitAllHandlers", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxXmlResource_InitAllHandlers, 1, NULL },
     { "Load", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxXmlResource_Load, 1, NULL },
 
-#if (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxBitmap)
+#if (wxLUA_USE_wxBitmap) && (wxLUA_USE_wxXRC && wxUSE_XRC)
     { "LoadBitmap", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxXmlResource_LoadBitmap, 1, NULL },
-#endif // (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxBitmap)
+#endif // (wxLUA_USE_wxBitmap) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 
-#if ((wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxDialog))
+#if ((wxLUA_USE_wxDialog) && (wxLUA_USE_wxXRC && wxUSE_XRC))
     { "LoadDialog", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxXmlResource_LoadDialog_overload, s_wxluafunc_wxLua_wxXmlResource_LoadDialog_overload_count, 0 },
-#endif // ((wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxDialog))
+#endif // ((wxLUA_USE_wxDialog) && (wxLUA_USE_wxXRC && wxUSE_XRC))
 
-#if (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxFrame)
+#if (wxLUA_USE_wxFrame) && (wxLUA_USE_wxXRC && wxUSE_XRC)
     { "LoadFrame", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxXmlResource_LoadFrame, 1, NULL },
-#endif // (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxFrame)
+#endif // (wxLUA_USE_wxFrame) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 
-#if (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxIcon)
+#if (wxLUA_USE_wxIcon) && (wxLUA_USE_wxXRC && wxUSE_XRC)
     { "LoadIcon", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxXmlResource_LoadIcon, 1, NULL },
-#endif // (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxIcon)
+#endif // (wxLUA_USE_wxIcon) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 
-#if (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxMenu && wxUSE_MENUS)
+#if (wxLUA_USE_wxMenu && wxUSE_MENUS) && (wxLUA_USE_wxXRC && wxUSE_XRC)
     { "LoadMenu", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxXmlResource_LoadMenu, 1, NULL },
-#endif // (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxMenu && wxUSE_MENUS)
+#endif // (wxLUA_USE_wxMenu && wxUSE_MENUS) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 
-#if ((wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxMenu && wxUSE_MENUS))
+#if ((wxLUA_USE_wxMenu && wxUSE_MENUS) && (wxLUA_USE_wxXRC && wxUSE_XRC))
     { "LoadMenuBar", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxXmlResource_LoadMenuBar_overload, s_wxluafunc_wxLua_wxXmlResource_LoadMenuBar_overload_count, 0 },
-#endif // ((wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxMenu && wxUSE_MENUS))
+#endif // ((wxLUA_USE_wxMenu && wxUSE_MENUS) && (wxLUA_USE_wxXRC && wxUSE_XRC))
 
 #if (wxLUA_USE_wxXRC && wxUSE_XRC)
     { "LoadPanel", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxXmlResource_LoadPanel_overload, s_wxluafunc_wxLua_wxXmlResource_LoadPanel_overload_count, 0 },
 #endif // (wxLUA_USE_wxXRC && wxUSE_XRC)
 
-#if (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxToolbar)
+#if (wxLUA_USE_wxToolbar) && (wxLUA_USE_wxXRC && wxUSE_XRC)
     { "LoadToolBar", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxXmlResource_LoadToolBar, 1, NULL },
-#endif // (wxLUA_USE_wxXRC && wxUSE_XRC) && (wxLUA_USE_wxToolbar)
+#endif // (wxLUA_USE_wxToolbar) && (wxLUA_USE_wxXRC && wxUSE_XRC)
 
     { "Set", WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, s_wxluafunc_wxLua_wxXmlResource_Set, 1, NULL },
     { "SetDomain", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxXmlResource_SetDomain, 1, NULL },

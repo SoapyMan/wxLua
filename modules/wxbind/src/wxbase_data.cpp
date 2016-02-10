@@ -1264,7 +1264,7 @@ static int LUACALL wxLua_wxObject_DynamicCast(lua_State *L)
 
 
 
-#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxClassInfo)
+#if (wxLUA_USE_wxClassInfo) && (wxLUA_USE_wxObject)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxObject_GetClassInfo[] = { &wxluatype_wxObject, NULL };
 static int LUACALL wxLua_wxObject_GetClassInfo(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxObject_GetClassInfo[1] = {{ wxLua_wxObject_GetClassInfo, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxObject_GetClassInfo }};
@@ -1281,7 +1281,7 @@ static int LUACALL wxLua_wxObject_GetClassInfo(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxClassInfo)
+#endif // (wxLUA_USE_wxClassInfo) && (wxLUA_USE_wxObject)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxObject_GetRefData[] = { &wxluatype_wxObject, NULL };
 static int LUACALL wxLua_wxObject_GetRefData(lua_State *L);
@@ -1300,7 +1300,7 @@ static int LUACALL wxLua_wxObject_GetRefData(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxClassInfo)
+#if (wxLUA_USE_wxClassInfo) && (wxLUA_USE_wxObject)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxObject_IsKindOf[] = { &wxluatype_wxObject, &wxluatype_wxClassInfo, NULL };
 static int LUACALL wxLua_wxObject_IsKindOf(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxObject_IsKindOf[1] = {{ wxLua_wxObject_IsKindOf, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxObject_IsKindOf }};
@@ -1319,7 +1319,7 @@ static int LUACALL wxLua_wxObject_IsKindOf(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxClassInfo)
+#endif // (wxLUA_USE_wxClassInfo) && (wxLUA_USE_wxObject)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxObject_IsSameAs[] = { &wxluatype_wxObject, &wxluatype_wxObject, NULL };
 static int LUACALL wxLua_wxObject_IsSameAs(lua_State *L);
@@ -1416,15 +1416,15 @@ void wxLua_wxObject_delete_function(void** p)
 wxLuaBindMethod wxObject_methods[] = {
     { "DynamicCast", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxObject_DynamicCast, 1, NULL },
 
-#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxClassInfo)
+#if (wxLUA_USE_wxClassInfo) && (wxLUA_USE_wxObject)
     { "GetClassInfo", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxObject_GetClassInfo, 1, NULL },
-#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxClassInfo)
+#endif // (wxLUA_USE_wxClassInfo) && (wxLUA_USE_wxObject)
 
     { "GetRefData", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxObject_GetRefData, 1, NULL },
 
-#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxClassInfo)
+#if (wxLUA_USE_wxClassInfo) && (wxLUA_USE_wxObject)
     { "IsKindOf", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxObject_IsKindOf, 1, NULL },
-#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxClassInfo)
+#endif // (wxLUA_USE_wxClassInfo) && (wxLUA_USE_wxObject)
 
     { "IsSameAs", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxObject_IsSameAs, 1, NULL },
     { "Ref", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxObject_Ref, 1, NULL },
@@ -1505,7 +1505,7 @@ int wxObjectRefData_methodCount = sizeof(wxObjectRefData_methods)/sizeof(wxLuaBi
 // Lua MetaTable Tag for Class 'wxClassInfo'
 int wxluatype_wxClassInfo = WXLUA_TUNKNOWN;
 
-#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxClassInfo)
+#if (wxLUA_USE_wxClassInfo) && (wxLUA_USE_wxObject)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxClassInfo_CreateObject[] = { &wxluatype_wxClassInfo, NULL };
 static int LUACALL wxLua_wxClassInfo_CreateObject(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxClassInfo_CreateObject[1] = {{ wxLua_wxClassInfo_CreateObject, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxClassInfo_CreateObject }};
@@ -1522,7 +1522,7 @@ static int LUACALL wxLua_wxClassInfo_CreateObject(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxClassInfo)
+#endif // (wxLUA_USE_wxClassInfo) && (wxLUA_USE_wxObject)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxClassInfo_FindClass[] = { &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxClassInfo_FindClass(lua_State *L);
@@ -1732,9 +1732,9 @@ void wxLua_wxClassInfo_delete_function(void** p)
 
 // Map Lua Class Methods to C Binding Functions
 wxLuaBindMethod wxClassInfo_methods[] = {
-#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxClassInfo)
+#if (wxLUA_USE_wxClassInfo) && (wxLUA_USE_wxObject)
     { "CreateObject", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxClassInfo_CreateObject, 1, NULL },
-#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxClassInfo)
+#endif // (wxLUA_USE_wxClassInfo) && (wxLUA_USE_wxObject)
 
     { "FindClass", WXLUAMETHOD_METHOD|WXLUAMETHOD_STATIC, s_wxluafunc_wxLua_wxClassInfo_FindClass, 1, NULL },
     { "GetBaseClass1", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxClassInfo_GetBaseClass1, 1, NULL },
@@ -1765,7 +1765,7 @@ int wxClassInfo_methodCount = sizeof(wxClassInfo_methods)/sizeof(wxLuaBindMethod
 // Lua MetaTable Tag for Class 'wxList'
 int wxluatype_wxList = WXLUA_TUNKNOWN;
 
-#if (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxList_Append2[] = { &wxluatype_wxList, &wxluatype_TSTRING, &wxluatype_wxObject, NULL };
 static int LUACALL wxLua_wxList_Append2(lua_State *L);
 // static wxLuaBindCFunc s_wxluafunc_wxLua_wxList_Append2[1] = {{ wxLua_wxList_Append2, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxList_Append2 }};
@@ -1824,7 +1824,7 @@ static int LUACALL wxLua_wxList_Append(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxList_Clear[] = { &wxluatype_wxList, NULL };
 static int LUACALL wxLua_wxList_Clear(lua_State *L);
@@ -1875,7 +1875,7 @@ static int LUACALL wxLua_wxList_DeleteNode(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxList_DeleteObject[] = { &wxluatype_wxList, &wxluatype_wxObject, NULL };
 static int LUACALL wxLua_wxList_DeleteObject(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxList_DeleteObject[1] = {{ wxLua_wxList_DeleteObject, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxList_DeleteObject }};
@@ -1894,7 +1894,7 @@ static int LUACALL wxLua_wxList_DeleteObject(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxList_Find2[] = { &wxluatype_wxList, &wxluatype_TSTRING, NULL };
 static int LUACALL wxLua_wxList_Find2(lua_State *L);
@@ -1933,7 +1933,7 @@ static int LUACALL wxLua_wxList_Find1(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxList_Find[] = { &wxluatype_wxList, &wxluatype_wxObject, NULL };
 static int LUACALL wxLua_wxList_Find(lua_State *L);
 // static wxLuaBindCFunc s_wxluafunc_wxLua_wxList_Find[1] = {{ wxLua_wxList_Find, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxList_Find }};
@@ -1952,7 +1952,7 @@ static int LUACALL wxLua_wxList_Find(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxList_GetCount[] = { &wxluatype_wxList, NULL };
 static int LUACALL wxLua_wxList_GetCount(lua_State *L);
@@ -2003,7 +2003,7 @@ static int LUACALL wxLua_wxList_GetLast(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxList_IndexOf[] = { &wxluatype_wxList, &wxluatype_wxObject, NULL };
 static int LUACALL wxLua_wxList_IndexOf(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxList_IndexOf[1] = {{ wxLua_wxList_IndexOf, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxList_IndexOf }};
@@ -2080,7 +2080,7 @@ static int LUACALL wxLua_wxList_Insert(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxList_IsEmpty[] = { &wxluatype_wxList, NULL };
 static int LUACALL wxLua_wxList_IsEmpty(lua_State *L);
@@ -2117,7 +2117,7 @@ static int LUACALL wxLua_wxList_Item(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxList_Member[] = { &wxluatype_wxList, &wxluatype_wxObject, NULL };
 static int LUACALL wxLua_wxList_Member(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxList_Member[1] = {{ wxLua_wxList_Member, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxList_Member }};
@@ -2136,7 +2136,7 @@ static int LUACALL wxLua_wxList_Member(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxList_delete[] = { &wxluatype_wxList, NULL };
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxList_delete[1] = {{ wxlua_userdata_delete, WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, 1, 1, s_wxluatypeArray_wxLua_wxList_delete }};
@@ -2159,62 +2159,62 @@ static int LUACALL wxLua_wxList_constructor(lua_State *L)
 
 
 
-#if ((wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject))
+#if ((wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL))
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxList_Append_overload[] =
 {
 
-#if (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
     { wxLua_wxList_Append2, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxList_Append2 },
-#endif // (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 
-#if (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
     { wxLua_wxList_Append1, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxList_Append1 },
-#endif // (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 
-#if (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
     { wxLua_wxList_Append, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxList_Append },
-#endif // (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 };
 static int s_wxluafunc_wxLua_wxList_Append_overload_count = sizeof(s_wxluafunc_wxLua_wxList_Append_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // ((wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject))
+#endif // ((wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL))
 
-#if (wxLUA_USE_wxList && !wxUSE_STL)||((wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject))
+#if (wxLUA_USE_wxList && !wxUSE_STL)||((wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL))
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxList_Find_overload[] =
 {
     { wxLua_wxList_Find2, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxList_Find2 },
     { wxLua_wxList_Find1, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxList_Find1 },
 
-#if (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
     { wxLua_wxList_Find, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxList_Find },
-#endif // (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 };
 static int s_wxluafunc_wxLua_wxList_Find_overload_count = sizeof(s_wxluafunc_wxLua_wxList_Find_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // (wxLUA_USE_wxList && !wxUSE_STL)||((wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject))
+#endif // (wxLUA_USE_wxList && !wxUSE_STL)||((wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL))
 
-#if ((wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject))
+#if ((wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL))
 // function overload table
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxList_Insert_overload[] =
 {
 
-#if (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
     { wxLua_wxList_Insert2, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxList_Insert2 },
-#endif // (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 
-#if (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
     { wxLua_wxList_Insert1, WXLUAMETHOD_METHOD, 3, 3, s_wxluatypeArray_wxLua_wxList_Insert1 },
-#endif // (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 
-#if (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
     { wxLua_wxList_Insert, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxList_Insert },
-#endif // (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 };
 static int s_wxluafunc_wxLua_wxList_Insert_overload_count = sizeof(s_wxluafunc_wxLua_wxList_Insert_overload)/sizeof(wxLuaBindCFunc);
 
-#endif // ((wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject))
+#endif // ((wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL))
 
 void wxLua_wxList_delete_function(void** p)
 {
@@ -2224,40 +2224,40 @@ void wxLua_wxList_delete_function(void** p)
 
 // Map Lua Class Methods to C Binding Functions
 wxLuaBindMethod wxList_methods[] = {
-#if ((wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject))
+#if ((wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL))
     { "Append", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxList_Append_overload, s_wxluafunc_wxLua_wxList_Append_overload_count, 0 },
-#endif // ((wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject))
+#endif // ((wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL))
 
     { "Clear", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxList_Clear, 1, NULL },
     { "DeleteContents", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxList_DeleteContents, 1, NULL },
     { "DeleteNode", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxList_DeleteNode, 1, NULL },
 
-#if (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
     { "DeleteObject", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxList_DeleteObject, 1, NULL },
-#endif // (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 
-#if (wxLUA_USE_wxList && !wxUSE_STL)||((wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject))
+#if (wxLUA_USE_wxList && !wxUSE_STL)||((wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL))
     { "Find", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxList_Find_overload, s_wxluafunc_wxLua_wxList_Find_overload_count, 0 },
-#endif // (wxLUA_USE_wxList && !wxUSE_STL)||((wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject))
+#endif // (wxLUA_USE_wxList && !wxUSE_STL)||((wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL))
 
     { "GetCount", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxList_GetCount, 1, NULL },
     { "GetFirst", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxList_GetFirst, 1, NULL },
     { "GetLast", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxList_GetLast, 1, NULL },
 
-#if (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
     { "IndexOf", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxList_IndexOf, 1, NULL },
-#endif // (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 
-#if ((wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject))
+#if ((wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL))
     { "Insert", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxList_Insert_overload, s_wxluafunc_wxLua_wxList_Insert_overload_count, 0 },
-#endif // ((wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject))
+#endif // ((wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL))
 
     { "IsEmpty", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxList_IsEmpty, 1, NULL },
     { "Item", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxList_Item, 1, NULL },
 
-#if (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
     { "Member", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxList_Member, 1, NULL },
-#endif // (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 
     { "delete", WXLUAMETHOD_METHOD|WXLUAMETHOD_DELETE, s_wxluafunc_wxLua_wxList_delete, 1, NULL },
     { "wxList", WXLUAMETHOD_CONSTRUCTOR, s_wxluafunc_wxLua_wxList_constructor, 1, NULL },
@@ -2278,7 +2278,7 @@ int wxList_methodCount = sizeof(wxList_methods)/sizeof(wxLuaBindMethod) - 1;
 // Lua MetaTable Tag for Class 'wxNode'
 int wxluatype_wxNode = WXLUA_TUNKNOWN;
 
-#if (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxNode_GetData[] = { &wxluatype_wxNode, NULL };
 static int LUACALL wxLua_wxNode_GetData(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxNode_GetData[1] = {{ wxLua_wxNode_GetData, WXLUAMETHOD_METHOD, 1, 1, s_wxluatypeArray_wxLua_wxNode_GetData }};
@@ -2295,7 +2295,7 @@ static int LUACALL wxLua_wxNode_GetData(lua_State *L)
     return 1;
 }
 
-#endif // (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 
 static wxLuaArgType s_wxluatypeArray_wxLua_wxNode_GetNext[] = { &wxluatype_wxNode, NULL };
 static int LUACALL wxLua_wxNode_GetNext(lua_State *L);
@@ -2330,7 +2330,7 @@ static int LUACALL wxLua_wxNode_GetPrevious(lua_State *L)
 }
 
 
-#if (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 static wxLuaArgType s_wxluatypeArray_wxLua_wxNode_SetData[] = { &wxluatype_wxNode, &wxluatype_wxObject, NULL };
 static int LUACALL wxLua_wxNode_SetData(lua_State *L);
 static wxLuaBindCFunc s_wxluafunc_wxLua_wxNode_SetData[1] = {{ wxLua_wxNode_SetData, WXLUAMETHOD_METHOD, 2, 2, s_wxluatypeArray_wxLua_wxNode_SetData }};
@@ -2347,7 +2347,7 @@ static int LUACALL wxLua_wxNode_SetData(lua_State *L)
     return 0;
 }
 
-#endif // (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 
 
 
@@ -2359,16 +2359,16 @@ void wxLua_wxNode_delete_function(void** p)
 
 // Map Lua Class Methods to C Binding Functions
 wxLuaBindMethod wxNode_methods[] = {
-#if (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
     { "GetData", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxNode_GetData, 1, NULL },
-#endif // (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 
     { "GetNext", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxNode_GetNext, 1, NULL },
     { "GetPrevious", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxNode_GetPrevious, 1, NULL },
 
-#if (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#if (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
     { "SetData", WXLUAMETHOD_METHOD, s_wxluafunc_wxLua_wxNode_SetData, 1, NULL },
-#endif // (wxLUA_USE_wxList && !wxUSE_STL) && (wxLUA_USE_wxObject)
+#endif // (wxLUA_USE_wxObject) && (wxLUA_USE_wxList && !wxUSE_STL)
 
     { 0, 0, 0, 0 },
 };

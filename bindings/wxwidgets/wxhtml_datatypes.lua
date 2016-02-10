@@ -3377,6 +3377,7 @@ wxhtml_dataTypeTable =
     BaseClasses = {
       [1] = "wxPanel",
       [2] = "wxHtmlWindowInterface",
+      [3] = "wxItemContainer",
     },
     Condition = "(wxLUA_USE_wxHTML && wxUSE_HTML) && (wxCHECK_VERSION(2,8,0))",
     IsNumber = false,
